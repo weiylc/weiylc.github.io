@@ -68,5 +68,8 @@ Thumbs.db
 dist/
 build/
 
+# Local documentation (not part of the published website)
+*.md
+
 # Local development
 .local/
