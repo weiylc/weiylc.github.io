@@ -95,11 +95,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
-      - name: 🔒 强制使用 HTTPS
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method PUT "repos/${{ github.repository }}/pages" -F https_enforced=true
-        
       - name: 🎉 部署成功通知
         run: |
           echo "🎊 TianDev Studio 官网部署成功！"
