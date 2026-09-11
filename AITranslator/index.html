@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AI Translator - Intelligent Multi-language Translation</title>
+    <meta name="description" content="Intelligent multi-language translation powered by Google ML Kit. Support 20+ languages with offline translation capability.">
+    <meta name="keywords" content="AI translator, multi-language, Google ML Kit, offline translation, iOS app, real-time translation">
+    <script src="../assets/js/lang-router.js" data-index-lang="en" data-has-en="false"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Translator - Intelligent Multi-language Translation">
+    <meta property="og:description" content="Intelligent multi-language translation powered by Google ML Kit">
+    <meta property="og:image" content="../assets/icons/ai-translator.svg">
+    <meta property="og:url" content="https://www.monkeyapp.stream/AITranslator/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-icon-large img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .language-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .app-store-large {
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        .app-store-large img {
+            height: 60px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card.featured {
+            border-color: #4facfe;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4facfe;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="logo">
+                    <span class="brand-name">TianDev Studio</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#apps">Apps</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-icon-large">
+                <img src="../assets/icons/ai-translator.svg" alt="AI Translator">
+            </div>
+            <h1>AI Translator</h1>
+            <p class="hero-subtitle">Intelligent Multi-language Translation</p>
+            <p>Powered by Google ML Kit with support for 20+ languages and offline translation</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Translation</h3>
+                    <p>Advanced translation engine powered by Google ML Kit for accurate and natural translations across multiple languages.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Offline Translation</h3>
+                    <p>Download language packs for offline translation. No internet connection required for your most used language pairs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Translation</h3>
+                    <p>Instant translation as you type with smart language detection and automatic switching between online and offline modes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>20+ Languages</h3>
+                    <p>Support for major world languages including Chinese, English, Japanese, German, French, Korean, Spanish, Arabic, and more.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Smart Language Selection</h3>
+                    <p>Intelligent language pair management with quick switching and translation preference memory for enhanced user experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Native iOS Design</h3>
+                    <p>Built with SwiftUI for smooth performance and modern interface. Supports iOS 15.0+ with 13 localized interface languages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Languages -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Supported Languages</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Translate between any of these 20+ languages</p>
+            
+            <div class="language-grid">
+                <div class="language-item">🇨🇳 简体中文</div>
+                <div class="language-item">🇺🇸 English</div>
+                <div class="language-item">🇯🇵 日本語</div>
+                <div class="language-item">🇩🇪 Deutsch</div>
+                <div class="language-item">🇫🇷 Français</div>
+                <div class="language-item">🇰🇷 한국어</div>
+                <div class="language-item">🇹🇼 繁體中文</div>
+                <div class="language-item">🇪🇸 Español</div>
+                <div class="language-item">🇵🇹 Português</div>
+                <div class="language-item">🇮🇹 Italiano</div>
+                <div class="language-item">🇸🇦 العربية</div>
+                <div class="language-item">🇮🇳 हिन्दी</div>
+                <div class="language-item">🇷🇺 Русский</div>
+                <div class="language-item">🇹🇭 ไทย</div>
+                <div class="language-item">🇻🇳 Tiếng Việt</div>
+                <div class="language-item">🇮🇩 Bahasa Indonesia</div>
+                <div class="language-item">🇹🇷 Türkçe</div>
+                <div class="language-item">🇳🇱 Nederlands</div>
+                <div class="language-item">🇵🇱 Polski</div>
+                <div class="language-item">🇸🇪 Svenska</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Subscription Plans</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Choose the plan that works best for you</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Weekly</h3>
+                    <div class="price">$1.99</div>
+                    <p>Perfect for short-term needs</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Monthly</h3>
+                    <div class="price">$4.99</div>
+                    <p>Great for regular users</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Quarterly</h3>
+                    <div class="price">$12.99</div>
+                    <p>Best value for 3 months</p>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Yearly</h3>
+                    <div class="price">$39.99</div>
+                    <p>Maximum savings - Most popular</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>System Requirements</h3>
+                    <ul style="text-align: left;">
+                        <li>iOS 15.0 or later</li>
+                        <li>iPhone, iPad, and iPod touch</li>
+                        <li>Internet connection for online translation</li>
+                        <li>Storage space for offline language packs</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Core Technologies</h3>
+                    <ul style="text-align: left;">
+                        <li>Swift 5.9 programming language</li>
+                        <li>SwiftUI declarative UI framework</li>
+                        <li>Google ML Kit Translate 4.0</li>
+                        <li>StoreKit 2 for subscriptions</li>
+                        <li>CocoaPods dependency management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2>Download AI Translator</h2>
+            <p>Start translating with AI-powered accuracy</p>
+            <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-large">
+                <img src="../assets/app-store-badge.svg" alt="Download on App Store">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="footer-logo">
+                    <p class="footer-description">Creating innovative iOS applications for a better digital experience.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="mailto:devapptian@gmail.com">Help Center</a></li>
+                            <li><a href="mailto:devapptian@gmail.com">Feedback</a></li>
+                            <li><a href="../#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TianDev Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

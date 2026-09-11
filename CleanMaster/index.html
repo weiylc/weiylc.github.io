@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Master - iPhone Storage Cleaner</title>
+    <meta name="description" content="Powerful iOS cleaning app to free up iPhone storage space with smart photo cleanup, storage analysis, and cache cleaning features.">
+    <meta name="keywords" content="clean master, iphone cleaner, storage cleaner, photo cleanup, cache cleaner, ios app">
+    <script src="../assets/js/lang-router.js" data-index-lang="en" data-has-en="false"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clean Master - iPhone Storage Cleaner">
+    <meta property="og:description" content="Free up iPhone storage space with smart cleaning features">
+    <meta property="og:image" content="../assets/icons/clean-master.svg">
+    <meta property="og:url" content="https://www.monkeyapp.stream/CleanMaster/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-icon-large img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .cleaning-section {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cleaning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .cleaning-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .cleaning-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .subscription-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .subscription-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subscription-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .subscription-card.featured {
+            border-color: #4CAF50;
+            transform: scale(1.05);
+        }
+        
+        .subscription-card h4 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .languages-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        @media (max-width: 768px){ .container{ padding: 0 16px; } .feature-grid{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+        
+        .language-tag {
+            background: #f0f8ff;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+        
+        .tech-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .spec-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .storage-visual {
+            background: linear-gradient(90deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+            height: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .storage-visual::after {
+            content: 'Before → After Cleaning';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="logo">
+                    <span class="brand-name">TianDev Studio</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#apps">Apps</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-icon-large">
+                <img src="../assets/icons/clean-master.svg" alt="Clean Master">
+            </div>
+            <h1>清洁大师</h1>
+            <h2>Clean Master</h2>
+            <p class="hero-subtitle">iPhone Storage Cleaner & Optimizer</p>
+            <p>Powerful iOS cleaning app to free up iPhone storage space with smart photo cleanup and cache cleaning</p>
+            
+            <div class="storage-visual"></div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Smart Photo Cleanup</h3>
+                    <p>Intelligently identify and remove similar photos, blurry images, and empty albums to free up valuable storage space.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Storage Analysis</h3>
+                    <p>Detailed storage space analysis with visual charts showing how your iPhone storage is being used across different categories.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🗑️</div>
+                    <h3>Cache Cleaning</h3>
+                    <p>Clean app caches, temporary files, and system junk to optimize your iPhone's performance and free up space.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Visual Reports</h3>
+                    <p>Interactive charts and graphs provide clear insights into your storage usage patterns and cleaning results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Recently Deleted Manager</h3>
+                    <p>Manage items in your "Recently Deleted" album to permanently free up space or recover accidentally deleted photos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>One-Tap Cleaning</h3>
+                    <p>Quick and easy cleaning process with intelligent recommendations for safe file removal and space optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cleaning Categories -->
+    <section class="cleaning-section">
+        <div class="container">
+            <h2>What We Clean</h2>
+            <p>Comprehensive cleaning across all areas of your iPhone</p>
+            
+            <div class="cleaning-grid">
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">🖼️</div>
+                    <h4>Similar Photos</h4>
+                    <p>Duplicate and near-duplicate images</p>
+                </div>
+                
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">🌫️</div>
+                    <h4>Blurry Photos</h4>
+                    <p>Low-quality and unfocused images</p>
+                </div>
+                
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">📁</div>
+                    <h4>Empty Albums</h4>
+                    <p>Albums with no photos or videos</p>
+                </div>
+                
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">🗂️</div>
+                    <h4>App Caches</h4>
+                    <p>Temporary app data and caches</p>
+                </div>
+                
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">⏳</div>
+                    <h4>Temporary Files</h4>
+                    <p>System and app temporary files</p>
+                </div>
+                
+                <div class="cleaning-card">
+                    <div class="cleaning-icon">🗃️</div>
+                    <h4>Recently Deleted</h4>
+                    <p>Items in trash waiting for deletion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="subscription-section">
+        <div class="container">
+            <h2 class="section-title">Subscription Plans</h2>
+            <p>Choose the plan that works best for you</p>
+            
+            <div class="subscription-grid">
+                <div class="subscription-card">
+                    <h4>Weekly</h4>
+                    <p>Perfect for quick cleanups</p>
+                    <div style="font-size: 1.2em; margin: 10px 0;">💫</div>
+                </div>
+                
+                <div class="subscription-card featured">
+                    <h4>Monthly</h4>
+                    <p>Most popular choice</p>
+                    <div style="font-size: 1.2em; margin: 10px 0;">⭐</div>
+                    <div style="background: #4CAF50; color: white; padding: 5px 10px; border-radius: 15px; font-size: 0.8em;">POPULAR</div>
+                </div>
+                
+                <div class="subscription-card">
+                    <h4>Quarterly</h4>
+                    <p>Great value option</p>
+                    <div style="font-size: 1.2em; margin: 10px 0;">💎</div>
+                </div>
+                
+                <div class="subscription-card">
+                    <h4>Yearly</h4>
+                    <p>Best value for money</p>
+                    <div style="font-size: 1.2em; margin: 10px 0;">👑</div>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 20px; border-radius: 12px; margin: 30px 0; display: inline-block;">
+                <h4 style="color: #4CAF50; margin-bottom: 10px;">🎁 3-Day Free Trial</h4>
+                <p>Try all premium features free for 3 days</p>
+                <p style="font-size: 0.9em; color: #666;">Cancel anytime during trial period</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-language Support -->
+    <section class="languages-section">
+        <div class="container">
+            <h2 class="section-title">Multi-Language Support</h2>
+            <p>Available in 13 languages worldwide</p>
+            
+            <div class="languages-grid">
+                <div class="language-tag">🇨🇳 简体中文</div>
+                <div class="language-tag">🇹🇼 繁體中文</div>
+                <div class="language-tag">🇺🇸 English</div>
+                <div class="language-tag">🇯🇵 日本語</div>
+                <div class="language-tag">🇰🇷 한국어</div>
+                <div class="language-tag">🇪🇸 Español</div>
+                <div class="language-tag">🇩🇪 Deutsch</div>
+                <div class="language-tag">🇫🇷 Français</div>
+                <div class="language-tag">🇵🇹 Português</div>
+                <div class="language-tag">🇮🇹 Italiano</div>
+                <div class="language-tag">🇸🇦 العربية</div>
+                <div class="language-tag">🇮🇳 हिन्दी</div>
+                <div class="language-tag">🇷🇺 Русский</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            
+            <div class="tech-specs">
+                <div class="spec-card">
+                    <h3>System Requirements</h3>
+                    <ul>
+                        <li>iOS 15.0 or later</li>
+                        <li>iPhone, iPad, and iPod touch</li>
+                        <li>64-bit processor support</li>
+                        <li>100MB available storage</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-card">
+                    <h3>Core Technologies</h3>
+                    <ul>
+                        <li>Swift 5.9 programming language</li>
+                        <li>SwiftUI modern UI framework</li>
+                        <li>Photos framework for media access</li>
+                        <li>Vision framework for image analysis</li>
+                        <li>StoreKit 2 for subscriptions</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-card">
+                    <h3>App Information</h3>
+                    <ul>
+                        <li>Bundle ID: com.CleanupMaster.app</li>
+                        <li>Category: Utilities & Productivity</li>
+                        <li>Architecture: MVVM with SwiftUI</li>
+                        <li>Modular design for maintainability</li>
+                        <li>Combine framework integration</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-card">
+                    <h3>Privacy & Security</h3>
+                    <ul>
+                        <li>Local processing only</li>
+                        <li>No data sent to external servers</li>
+                        <li>Photos permission required</li>
+                        <li>Secure deletion algorithms</li>
+                        <li>Privacy-first design approach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2>Download Clean Master</h2>
+            <p>Start cleaning and optimizing your iPhone today</p>
+            <p style="margin: 20px 0; color: #666;">Coming Soon to App Store</p>
+            <div style="background: white; padding: 20px; border-radius: 12px; display: inline-block; margin: 20px;">
+                <p><strong>Bundle ID:</strong> com.CleanupMaster.app</p>
+                <p><strong>Category:</strong> Utilities & Productivity</p>
+                <p><strong>Languages:</strong> 13 supported languages</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="footer-logo">
+                    <p class="footer-description">Creating innovative iOS applications for a better digital experience.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy_policy_en.html">Privacy Policy (EN)</a></li>
+                            <li><a href="privacy_policy_zh.html">隐私政策 (中文)</a></li>
+                            <li><a href="terms_of_service_en.html">Terms of Service (EN)</a></li>
+                            <li><a href="terms_of_service_zh.html">服务条款 (中文)</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="mailto:devapptian@gmail.com">Help Center</a></li>
+                            <li><a href="mailto:devapptian@gmail.com">Feedback</a></li>
+                            <li><a href="../#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TianDev Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

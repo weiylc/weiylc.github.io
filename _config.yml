@@ -1,0 +1,76 @@
+# GitHub Pages Configuration
+title: "TianDev Studio - 专业移动应用开发"
+description: "探索我们的专业移动应用程序集合，包括AI翻译官、清洁大师、指南针专业版等优质应用。"
+url: "https://www.monkeyapp.stream"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO settings
+author: "TianDev Studio"
+twitter:
+  username: tiandevstudio
+  card: summary_large_image
+
+social:
+  name: "TianDev Studio"
+  links:
+    - https://github.com/devforapp
+    - mailto:devapptian@gmail.com
+
+# Google Analytics
+google_analytics: G-38JPTSTRNG
+
+# Language settings
+lang: zh_CN
+locale: zh_CN
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .github/
+  - node_modules/
+  - package*.json
+
+# Include files
+include:
+  - _pages
+  - assets
+
+# Collections
+collections:
+  apps:
+    output: false
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: assets/css
+
+# Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false

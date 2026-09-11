@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音转文字 - AI智能录音转写应用</title>
+    <meta name="description" content="专业的iOS语音转文字应用，支持高精度AI语音识别，实时录音转写，智能文字编辑，让您的语音瞬间变成文字。">
+    <meta name="keywords" content="语音转文字,录音转写,AI语音识别,语音笔记,录音应用,iOS应用">
+    <script src="../assets/js/lang-router.js" data-index-lang="zh" data-has-en="true"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="语音转文字 - AI智能录音转写应用">
+    <meta property="og:description" content="专业的iOS语音转文字应用，支持高精度AI语音识别">
+    <meta property="og:image" content="../assets/icons/voice-recorder.svg">
+    <meta property="og:url" content="https://www.monkeyapp.stream/VoiceRecorderApp/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-icon-large .icon {
+            font-size: 60px;
+            color: #667eea;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .ai-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .ai-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .ai-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .tech-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-store-btn {
+            display: inline-block;
+            margin: 20px 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .app-store-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer-links {
+            margin-top: 30px;
+        }
+        @media (max-width: 768px){
+            .feature-grid{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+            .container{ padding: 0 16px; }
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .home-link {
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+        
+        .home-link:hover {
+            background: #5a67d8;
+            color: white;
+        }
+        
+        .language-selector select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector and Home Link -->
+    <div class="language-selector">
+        <a href="../" class="home-link" id="home-link">返回主页</a>
+        <select onchange="switchLanguage(this.value)">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-icon-large">
+                <div class="icon">🎤</div>
+            </div>
+            <h1 id="hero-title">语音转文字</h1>
+            <p id="hero-subtitle">AI智能录音转写应用，让您的语音瞬间变成文字</p>
+            <p id="hero-description">支持高精度语音识别，实时转写，智能编辑，是您工作学习的得力助手</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <h2 id="features-title" style="text-align: center; margin: 60px 0 30px; font-size: 2.5em; color: #333;">核心功能</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3 id="feature1-title">高质量录音</h3>
+                <p id="feature1-desc">使用专业级音频录制技术，确保录音质量清晰，支持多种音频格式</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 id="feature2-title">实时音频可视化</h3>
+                <p id="feature2-desc">录音时显示动态音频波形，直观展示音频强度和质量</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 id="feature3-title">AI语音识别</h3>
+                <p id="feature3-desc">集成OpenAI Whisper API，提供业界领先的语音识别准确率</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✏️</div>
+                <h3 id="feature4-title">智能文字编辑</h3>
+                <p id="feature4-desc">支持转写结果的查看、编辑、分享，让文字处理更加便捷</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3 id="feature5-title">历史记录管理</h3>
+                <p id="feature5-desc">自动保存录音和转写历史，支持分类管理和快速检索</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 id="feature6-title">现代化界面</h3>
+                <p id="feature6-desc">基于SwiftUI设计的简洁美观界面，操作直观，体验流畅</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Technology Section -->
+    <section class="ai-section">
+        <div class="container">
+            <h2 id="ai-title">AI技术驱动</h2>
+            <p id="ai-subtitle">采用最先进的人工智能技术，为您提供卓越的语音转文字体验</p>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">🧠</div>
+                    <h3 id="ai1-title">深度学习</h3>
+                    <p id="ai1-desc">基于深度神经网络的语音识别模型</p>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">🌐</div>
+                    <h3 id="ai2-title">多语言支持</h3>
+                    <p id="ai2-desc">支持中文、英文等多种语言识别</p>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">⚡</div>
+                    <h3 id="ai3-title">实时处理</h3>
+                    <p id="ai3-desc">快速响应，实时转写，提升工作效率</p>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">🎯</div>
+                    <h3 id="ai4-title">高精准度</h3>
+                    <p id="ai4-desc">业界领先的识别准确率，减少错误</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-section">
+        <div class="container">
+            <h2 id="tech-title" style="text-align: center; margin-bottom: 30px; color: #333;">技术架构</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Swift</h4>
+                    <p id="tech1-desc">原生iOS开发语言</p>
+                </div>
+                <div class="tech-item">
+                    <h4>SwiftUI</h4>
+                    <p id="tech2-desc">现代化UI框架</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AVFoundation</h4>
+                    <p id="tech3-desc">专业音频处理</p>
+                </div>
+                <div class="tech-item">
+                    <h4>OpenAI Whisper</h4>
+                    <p id="tech4-desc">AI语音识别</p>
+                </div>
+                <div class="tech-item">
+                    <h4>iOS 17.0+</h4>
+                    <p id="tech5-desc">最新系统支持</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 id="download-title">立即下载</h2>
+            <p id="download-subtitle">在App Store免费下载，开始您的智能语音转文字之旅</p>
+            
+            <a href="#" class="app-store-btn">
+                <img src="../assets/app-store-badge.svg" alt="Download on App Store" style="height: 60px;">
+            </a>
+            
+            <div class="footer-links">
+                <a href="privacy_policy_zh.html" id="privacy-link">隐私政策</a>
+                <a href="terms_of_service_zh.html" id="terms-link">服务条款</a>
+                <a href="mailto:devapptian@gmail.com" id="contact-link">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const translations = {
+            zh: {
+                'hero-title': '语音转文字',
+                'hero-subtitle': 'AI智能录音转写应用，让您的语音瞬间变成文字',
+                'hero-description': '支持高精度语音识别，实时转写，智能编辑，是您工作学习的得力助手',
+                'features-title': '核心功能',
+                'feature1-title': '高质量录音',
+                'feature1-desc': '使用专业级音频录制技术，确保录音质量清晰，支持多种音频格式',
+                'feature2-title': '实时音频可视化',
+                'feature2-desc': '录音时显示动态音频波形，直观展示音频强度和质量',
+                'feature3-title': 'AI语音识别',
+                'feature3-desc': '集成OpenAI Whisper API，提供业界领先的语音识别准确率',
+                'feature4-title': '智能文字编辑',
+                'feature4-desc': '支持转写结果的查看、编辑、分享，让文字处理更加便捷',
+                'feature5-title': '历史记录管理',
+                'feature5-desc': '自动保存录音和转写历史，支持分类管理和快速检索',
+                'feature6-title': '现代化界面',
+                'feature6-desc': '基于SwiftUI设计的简洁美观界面，操作直观，体验流畅',
+                'ai-title': 'AI技术驱动',
+                'ai-subtitle': '采用最先进的人工智能技术，为您提供卓越的语音转文字体验',
+                'ai1-title': '深度学习',
+                'ai1-desc': '基于深度神经网络的语音识别模型',
+                'ai2-title': '多语言支持',
+                'ai2-desc': '支持中文、英文等多种语言识别',
+                'ai3-title': '实时处理',
+                'ai3-desc': '快速响应，实时转写，提升工作效率',
+                'ai4-title': '高精准度',
+                'ai4-desc': '业界领先的识别准确率，减少错误',
+                'tech-title': '技术架构',
+                'tech1-desc': '原生iOS开发语言',
+                'tech2-desc': '现代化UI框架',
+                'tech3-desc': '专业音频处理',
+                'tech4-desc': 'AI语音识别',
+                'tech5-desc': '最新系统支持',
+                'download-title': '立即下载',
+                'download-subtitle': '在App Store免费下载，开始您的智能语音转文字之旅',
+                'privacy-link': '隐私政策',
+                'terms-link': '服务条款',
+                'contact-link': '联系我们',
+                'home-link': '返回主页'
+            },
+            en: {
+                'hero-title': 'Voice to Text',
+                'hero-subtitle': 'AI-powered voice recording and transcription app',
+                'hero-description': 'High-precision speech recognition, real-time transcription, and intelligent editing for your work and study',
+                'features-title': 'Core Features',
+                'feature1-title': 'High-Quality Recording',
+                'feature1-desc': 'Professional-grade audio recording technology ensuring clear sound quality with multiple format support',
+                'feature2-title': 'Real-time Audio Visualization',
+                'feature2-desc': 'Dynamic audio waveform display during recording, showing audio intensity and quality intuitively',
+                'feature3-title': 'AI Speech Recognition',
+                'feature3-desc': 'Integrated with OpenAI Whisper API for industry-leading speech recognition accuracy',
+                'feature4-title': 'Smart Text Editing',
+                'feature4-desc': 'View, edit, and share transcription results with convenient text processing features',
+                'feature5-title': 'History Management',
+                'feature5-desc': 'Automatically save recording and transcription history with categorized management and quick search',
+                'feature6-title': 'Modern Interface',
+                'feature6-desc': 'Clean and beautiful SwiftUI-based interface with intuitive operation and smooth experience',
+                'ai-title': 'AI Technology Powered',
+                'ai-subtitle': 'Utilizing cutting-edge artificial intelligence technology for exceptional voice-to-text experience',
+                'ai1-title': 'Deep Learning',
+                'ai1-desc': 'Speech recognition model based on deep neural networks',
+                'ai2-title': 'Multi-language Support',
+                'ai2-desc': 'Support for Chinese, English and multiple languages',
+                'ai3-title': 'Real-time Processing',
+                'ai3-desc': 'Fast response and real-time transcription for improved efficiency',
+                'ai4-title': 'High Accuracy',
+                'ai4-desc': 'Industry-leading recognition accuracy with reduced errors',
+                'tech-title': 'Technology Stack',
+                'tech1-desc': 'Native iOS development language',
+                'tech2-desc': 'Modern UI framework',
+                'tech3-desc': 'Professional audio processing',
+                'tech4-desc': 'AI speech recognition',
+                'tech5-desc': 'Latest system support',
+                'download-title': 'Download Now',
+                'download-subtitle': 'Free download on App Store, start your intelligent voice-to-text journey',
+                'privacy-link': 'Privacy Policy',
+                'terms-link': 'Terms of Service',
+                'contact-link': 'Contact Us',
+                'home-link': 'Back to Home'
+            }
+        };
+
+        function switchLanguage(lang) {
+            const elements = translations[lang];
+            for (const [id, text] of Object.entries(elements)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = text;
+                }
+            }
+            
+            // Update privacy and terms links
+            if (lang === 'zh') {
+                document.getElementById('privacy-link').href = 'privacy_policy_zh.html';
+                document.getElementById('terms-link').href = 'terms_of_service_zh.html';
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                document.getElementById('privacy-link').href = 'privacy_policy_en.html';
+                document.getElementById('terms-link').href = 'terms_of_service_en.html';
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="responsiveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="22" fill="url(#responsiveGradient)"/>
+  
+  <!-- Desktop -->
+  <rect x="8" y="14" width="16" height="10" rx="1" fill="white" opacity="0.9"/>
+  <rect x="9" y="15" width="14" height="7" fill="#F3F4F6"/>
+  <rect x="14" y="24" width="4" height="2" fill="white" opacity="0.9"/>
+  <rect x="12" y="26" width="8" height="1" rx="0.5" fill="white" opacity="0.9"/>
+  
+  <!-- Tablet -->
+  <rect x="26" y="12" width="10" height="14" rx="2" fill="white" opacity="0.9"/>
+  <rect x="27" y="14" width="8" height="10" fill="#F3F4F6"/>
+  <circle cx="31" cy="25" r="0.5" fill="#9CA3AF"/>
+  
+  <!-- Phone -->
+  <rect x="38" y="16" width="6" height="10" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="39" y="17.5" width="4" height="6" fill="#F3F4F6"/>
+  <circle cx="41" cy="24.5" r="0.5" fill="#9CA3AF"/>
+  
+  <!-- Connection lines -->
+  <path d="M24 19 L26 19" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  <path d="M36 19 L38 19" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Responsive arrows -->
+  <path d="M16 32 L20 36 L16 40" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 32 L28 36 L32 40" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterMark Cam - Professional Watermark Camera</title>
+    <meta name="description" content="Professional watermark camera for work check-in and attendance verification with GPS location, timestamp, and custom text watermarks.">
+    <meta name="keywords" content="watermark camera, work check-in, attendance, GPS camera, timestamp camera, iOS app">
+    <script src="../assets/js/lang-router.js" data-index-lang="en" data-has-en="false"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="WaterMark Cam - Professional Watermark Camera">
+    <meta property="og:description" content="Professional watermark camera for work check-in and attendance verification">
+    <meta property="og:image" content="../assets/icons/watermark-cam.svg">
+    <meta property="og:url" content="https://www.monkeyapp.stream/WatermarkCam/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-icon-large img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .watermark-demo {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .demo-image {
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .watermark-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .watermark-feature {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .app-store-large {
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        .app-store-large img {
+            height: 60px;
+        }
+        
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .use-case {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .use-case-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .subscription-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .subscription-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .subscription-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .price {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px){ .container{ padding: 0 16px; } .feature-grid{ grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); } }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="logo">
+                    <span class="brand-name">TianDev Studio</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#apps">Apps</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-icon-large">
+                <img src="../assets/icons/watermark-cam.svg" alt="WaterMark Cam">
+            </div>
+            <h1>WaterMark Cam</h1>
+            <p class="hero-subtitle">Professional Watermark Camera</p>
+            <p>Perfect for work check-in, attendance verification, and professional documentation with automatic GPS and timestamp watermarks</p>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Professional Camera</h3>
+                    <p>High-quality camera with automatic watermark overlay featuring timestamp, GPS location, and custom text for professional documentation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>GPS Location</h3>
+                    <p>Automatic GPS positioning with precise address resolution and location verification for accurate attendance tracking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Timestamp Watermark</h3>
+                    <p>Automatic timestamp overlay with customizable date and time formats for reliable time-based verification.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Custom Text</h3>
+                    <p>Add custom text watermarks for company names, employee IDs, project names, or any other identification information.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>History Records</h3>
+                    <p>Complete check-in history with Core Data storage, search functionality, and detailed record management for tracking purposes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language</h3>
+                    <p>Support for 11 languages including Chinese, English, Japanese, Korean, and more for global workforce management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watermark Demo Section -->
+    <section class="watermark-demo">
+        <div class="container">
+            <h2 class="section-title">Watermark Features</h2>
+            <p>Automatic watermark overlay with comprehensive information</p>
+            
+            <div class="watermark-features">
+                <div class="watermark-feature">
+                    <h4>📅 Date & Time</h4>
+                    <p>Automatic timestamp with customizable formats</p>
+                </div>
+                
+                <div class="watermark-feature">
+                    <h4>🗺️ GPS Coordinates</h4>
+                    <p>Precise latitude and longitude positioning</p>
+                </div>
+                
+                <div class="watermark-feature">
+                    <h4>📍 Address</h4>
+                    <p>Automatic address resolution and display</p>
+                </div>
+                
+                <div class="watermark-feature">
+                    <h4>✏️ Custom Text</h4>
+                    <p>Personalized text for company or project info</p>
+                </div>
+                
+                <div class="watermark-feature">
+                    <h4>🎨 Customizable Style</h4>
+                    <p>Adjustable font, size, and position options</p>
+                </div>
+                
+                <div class="watermark-feature">
+                    <h4>🔒 Tamper-Proof</h4>
+                    <p>Embedded watermark for authenticity verification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🏢</div>
+                    <h3>Work Check-in</h3>
+                    <p>Employee attendance verification with location and time proof for remote and on-site workers.</p>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🚧</div>
+                    <h3>Construction Sites</h3>
+                    <p>Document work progress, safety inspections, and site conditions with location-verified photos.</p>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🚚</div>
+                    <h3>Delivery Services</h3>
+                    <p>Proof of delivery with timestamp and location verification for logistics and courier services.</p>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🏥</div>
+                    <h3>Healthcare</h3>
+                    <p>Patient visit documentation and medical facility check-ins with time and location verification.</p>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🔧</div>
+                    <h3>Field Service</h3>
+                    <p>Service call documentation and maintenance records with location and timestamp proof.</p>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📊</div>
+                    <h3>Quality Control</h3>
+                    <p>Inspection documentation and quality assurance with verifiable time and location data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscription-section">
+        <div class="container">
+            <h2>Premium Features</h2>
+            <p>Unlock advanced watermark customization and unlimited storage</p>
+            
+            <div class="subscription-grid">
+                <div class="subscription-card">
+                    <h3>Basic</h3>
+                    <div class="price">Free</div>
+                    <ul style="text-align: left;">
+                        <li>Basic watermark features</li>
+                        <li>Limited history storage</li>
+                        <li>Standard templates</li>
+                    </ul>
+                </div>
+                
+                <div class="subscription-card">
+                    <h3>Premium</h3>
+                    <div class="price">$2.99/mo</div>
+                    <ul style="text-align: left;">
+                        <li>Advanced watermark customization</li>
+                        <li>Unlimited history storage</li>
+                        <li>Custom templates</li>
+                        <li>Export options</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>System Requirements</h3>
+                    <ul style="text-align: left;">
+                        <li>iOS 15.0 or later</li>
+                        <li>iPhone with camera</li>
+                        <li>Location services enabled</li>
+                        <li>Internet connection for address resolution</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Core Technologies</h3>
+                    <ul style="text-align: left;">
+                        <li>Swift + SwiftUI framework</li>
+                        <li>AVFoundation for camera</li>
+                        <li>Core Location for GPS</li>
+                        <li>Core Data for storage</li>
+                        <li>StoreKit 2 for subscriptions</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>App Information</h3>
+                    <ul style="text-align: left;">
+                        <li>Bundle ID: com.wmcam.WaterMarkCam</li>
+                        <li>Team ID: 9N9LUCTZ22</li>
+                        <li>Category: Photography & Productivity</li>
+                        <li>Languages: 11 supported languages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2>Download WaterMark Cam</h2>
+            <p>Start professional watermark photography today</p>
+            <a href="https://apps.apple.com/app/id6754108984" class="app-store-large" aria-label="Download on the App Store">
+                <img src="../assets/app-store-badge.svg" alt="Download on the App Store">
+            </a>
+            <div style="background: white; padding: 20px; border-radius: 12px; display: inline-block; margin: 20px;">
+                <p><strong>Bundle ID:</strong> com.wmcam.WaterMarkCam</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+                <p><strong>Category:</strong> Photography & Productivity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="footer-logo">
+                    <p class="footer-description">Creating innovative iOS applications for a better digital experience.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="mailto:devapptian@gmail.com">Help Center</a></li>
+                            <li><a href="mailto:devapptian@gmail.com">Feedback</a></li>
+                            <li><a href="../#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TianDev Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.monkeyapp.stream/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow common non-content directories
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow important assets
+Allow: /assets/images/
+Allow: /assets/manifest.json
+Allow: /assets/favicon.ico

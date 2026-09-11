@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于证照之星 - 产品介绍与技术方案</title>
+  <meta name="description" content="证照之星是一款免费、专业的证件照制作App，端侧AI处理，支持多规格与背景、一键抠图与美颜。">
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#333;background:#fff;line-height:1.7}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    header{padding:12px 0;border-bottom:1px solid #eee;margin-bottom:16px}
+    h1{font-size:2rem;margin:.5rem 0;color:#333}
+    h2{margin-top:1.5rem;color:#222}
+    .back{color:#667eea;text-decoration:none}
+    ul{padding-left:1.2rem}
+    .meta{color:#666}
+  </style>
+  </head>
+<body>
+  <header class="container">
+    <a class="back" href="index.html">← 返回应用主页</a>
+    <h1>关于证照之星</h1>
+    <p class="meta">Bundle ID：com.IDPhoto.ios ｜ 平台：iOS（SwiftUI）</p>
+  </header>
+  <main class="container">
+    <h2>核心价值主张</h2>
+    <p>我们提供完全免费、高清无水印、操作简单、效果专业的证件照制作服务，覆盖学生、求职者、备考人员及各类签证办理人群。</p>
+    <h2>功能亮点</h2>
+    <ul>
+      <li>端侧AI抠图：基于 Apple Vision（iOS 15+），图片不离开设备，隐私更安全。</li>
+      <li>规格全面：内置数百种考试与签证尺寸，精准头部比例与背景要求。</li>
+      <li>拍摄引导与质检：人脸对齐、姿势校正、光线与清晰度检测，减少重拍。</li>
+      <li>背景与美颜：红/白/蓝等背景；磨皮提亮（免费）；高级祛痘/塑形（Pro）。</li>
+      <li>正装模板与云相册（Pro）：一键换正装；加密历史记录便捷复用。</li>
+    </ul>
+    <h2>技术方案</h2>
+    <ul>
+      <li>架构与语言：iOS 原生 Swift + SwiftUI，图片处理采用 Core Image / Core Graphics。</li>
+      <li>AI：Vision 人像分割，必要时可引入轻量 Core ML 备选（如 MODNet / U^2-Net）。</li>
+      <li>依赖：Swift Package Manager（SPM）。</li>
+      <li>商业化支撑：StoreKit 2 内购、Google AdMob 广告、（可选）友盟统计。</li>
+    </ul>
+    <h2>隐私与合规</h2>
+    <p>我们坚持“端上处理”，您的照片与人像数据不会上传或存储在服务器。若启用数据分析，仅收集匿名使用数据用于改进体验。详见<a href="privacy-zh.html">《隐私政策》</a>与<a href="terms-zh.html">《用户服务条款》</a>。</p>
+    <h2>订阅与价格</h2>
+    <p>提供周/月/年订阅与一次性买断，均可包含 3 天免费试用。具体以上架后 App 内展示为准。</p>
+  </main>
+  <footer class="container" style="border-top:1px solid #eee;margin-top:24px;padding-top:16px">
+    <a class="back" href="../index.html#apps">返回官网</a>
+  </footer>
+</body>
+</html>

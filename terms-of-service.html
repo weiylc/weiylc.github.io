@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - TianDev Studio</title>
+    <meta name="description" content="Terms of Service for TianDev Studio apps. Read the terms and conditions governing your use of our mobile applications.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.monkeyapp.stream/terms-of-service.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        .header-nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 24px 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        /* Content */
+        .content-wrapper {
+            max-width: 900px;
+            margin: -40px auto 60px;
+            padding: 0 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 56px 64px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: #f0f4ff;
+            color: #667eea;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 40px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f4ff;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 14px;
+            font-size: 0.97rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+
+        ul li {
+            color: #555;
+            font-size: 0.97rem;
+            padding: 5px 0 5px 22px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: 700;
+            position: absolute;
+            left: 6px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #444;
+        }
+
+        .warning-box {
+            background: #fff8f0;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #78350f;
+        }
+
+        .contact-block {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .contact-block h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+            margin-top: 0;
+        }
+
+        .contact-block p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-block a {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .card { padding: 32px 24px; }
+            .header-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://www.monkeyapp.stream/" class="header-logo">TianDev Studio</a>
+            <nav class="header-nav">
+                <a href="https://www.monkeyapp.stream/">Home</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Terms of Service</h1>
+        <p>Terms and conditions governing your use of our applications</p>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="card">
+            <span class="last-updated">Last Updated: February 22, 2026</span>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, or using any application developed by TianDev Studio ("we", "our", or "us"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not download or use our Apps.</p>
+            <p>These Terms apply to all TianDev Studio applications available on the Apple App Store and Google Play Store (collectively, the "Apps"). Additional terms may apply to specific Apps and will be disclosed within those Apps.</p>
+
+            <h2>2. Eligibility</h2>
+            <p>You must be at least 13 years of age (or 16 in the European Economic Area) to use our Apps. By using our Apps, you represent and warrant that you meet this age requirement. If you are using our Apps on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+
+            <h2>3. License to Use</h2>
+            <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use our Apps on devices that you own or control, solely for your personal, non-commercial purposes.</p>
+            <p>You may not:</p>
+            <ul>
+                <li>Copy, modify, distribute, sell, or lease any part of our Apps</li>
+                <li>Reverse engineer, decompile, or attempt to extract the source code of our Apps</li>
+                <li>Remove or alter any proprietary notices, labels, or marks within our Apps</li>
+                <li>Use our Apps for any unlawful purpose or in violation of any applicable laws</li>
+                <li>Use our Apps to infringe upon the intellectual property rights of any third party</li>
+                <li>Attempt to gain unauthorized access to any part of our Apps or associated systems</li>
+            </ul>
+
+            <h2>4. In-App Purchases and Subscriptions</h2>
+            <p>Some of our Apps offer in-app purchases, including one-time purchases and auto-renewing subscriptions. By making a purchase, you agree to the following:</p>
+
+            <p><strong>Subscriptions</strong></p>
+            <ul>
+                <li>Subscriptions automatically renew at the end of each billing period unless cancelled at least 24 hours before the renewal date</li>
+                <li>Your payment account will be charged for renewal within 24 hours before the end of the current billing period</li>
+                <li>Subscription prices may vary by region and are displayed in the App before purchase</li>
+                <li>You can manage or cancel subscriptions in your App Store or Google Play account settings</li>
+            </ul>
+
+            <p><strong>Refunds</strong></p>
+            <ul>
+                <li>All purchases are processed by Apple App Store or Google Play; refund requests must be submitted through the respective platform</li>
+                <li>We do not directly process refunds; please contact Apple or Google for refund inquiries</li>
+                <li>Free trial periods, if offered, are subject to the terms displayed at the time of sign-up</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>iOS Subscription Management:</strong> Settings &gt; [Your Name] &gt; Subscriptions<br>
+                <strong>Android Subscription Management:</strong> Google Play &gt; Profile &gt; Payments &amp; subscriptions</p>
+            </div>
+
+            <h2>5. Free Tier and Advertisements</h2>
+            <p>Our Apps may be offered free of charge with limited functionality, supported by advertising. By using the free tier of our Apps, you consent to the display of advertisements provided by our advertising partners, including Google AdMob.</p>
+            <p>Users with an active paid subscription will not be shown advertisements within the applicable App.</p>
+
+            <h2>6. User Content</h2>
+            <p>Some of our Apps allow you to create, upload, or process content ("User Content"). You retain ownership of your User Content. By using features that process your content, you grant us a limited license to process that content solely to provide the requested functionality.</p>
+            <p>You represent and warrant that:</p>
+            <ul>
+                <li>You own or have the necessary rights to the User Content you submit</li>
+                <li>Your User Content does not infringe the intellectual property rights of any third party</li>
+                <li>Your User Content does not violate any applicable laws or regulations</li>
+                <li>Your User Content does not contain viruses, malware, or other harmful components</li>
+            </ul>
+
+            <p>You may not use our Apps to process, store, or transmit content that is illegal, harmful, threatening, abusive, defamatory, or otherwise objectionable.</p>
+
+            <h2>7. Intellectual Property</h2>
+            <p>Our Apps and all associated content, features, and functionality (including but not limited to text, graphics, logos, icons, images, and software) are the exclusive property of TianDev Studio and are protected by copyright, trademark, and other intellectual property laws.</p>
+            <p>The TianDev Studio name, logo, and all related product and service names are trademarks of TianDev Studio. You may not use these marks without our prior written consent.</p>
+
+            <h2>8. Privacy</h2>
+            <p>Your use of our Apps is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our Privacy Policy at <a href="https://www.monkeyapp.stream/privacy-policy.html" style="color:#667eea;">www.monkeyapp.stream/privacy-policy.html</a> to understand our practices.</p>
+
+            <h2>9. Third-Party Services</h2>
+            <p>Our Apps may integrate with or contain links to third-party services, applications, or websites. These third-party services have their own terms of service and privacy policies, and your use of them is governed by those policies. We are not responsible for the content, practices, or policies of any third-party services.</p>
+            <p>Third-party services integrated into our Apps may include:</p>
+            <ul>
+                <li>Google Firebase (analytics and crash reporting)</li>
+                <li>Google AdMob (advertising)</li>
+                <li>Apple App Store / Google Play (payment processing)</li>
+                <li>RevenueCat (subscription management)</li>
+            </ul>
+
+            <h2>10. Disclaimer of Warranties</h2>
+            <div class="warning-box">
+                <p>OUR APPS ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+            </div>
+            <p>We do not warrant that:</p>
+            <ul>
+                <li>Our Apps will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+                <li>The results obtained from using our Apps will be accurate or reliable</li>
+                <li>Any errors in our Apps will be corrected</li>
+            </ul>
+
+            <h2>11. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, TianDev Studio and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of profits, data, use, or goodwill, arising out of or in connection with your use of our Apps, even if we have been advised of the possibility of such damages.</p>
+            <p>In no event shall our total liability to you for all claims exceed the amount you paid us in the twelve (12) months preceding the claim.</p>
+
+            <h2>12. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless TianDev Studio and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to your use of our Apps, your User Content, or your violation of these Terms.</p>
+
+            <h2>13. Termination</h2>
+            <p>We reserve the right to suspend or terminate your access to our Apps at any time, with or without notice, for any reason, including if we reasonably believe you have violated these Terms. You may also stop using our Apps at any time.</p>
+            <p>Upon termination, all licenses granted to you under these Terms will immediately cease. Sections that by their nature should survive termination (including intellectual property, disclaimer of warranties, limitation of liability, and governing law) will survive.</p>
+
+            <h2>14. Updates and Changes</h2>
+            <p>We may update our Apps from time to time to add new features, fix bugs, or improve performance. We may also modify these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page. Your continued use of our Apps after any changes constitutes your acceptance of the updated Terms.</p>
+
+            <h2>15. Governing Law and Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising from these Terms or your use of our Apps will be resolved through good-faith negotiation. If negotiation fails, disputes shall be submitted to binding arbitration in accordance with applicable arbitration rules.</p>
+            <p>Nothing in these Terms limits your rights as a consumer under the mandatory consumer protection laws of your country of residence.</p>
+
+            <h2>16. Severability and Entire Agreement</h2>
+            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect. These Terms, together with our Privacy Policy and any additional terms applicable to specific Apps, constitute the entire agreement between you and TianDev Studio regarding your use of our Apps.</p>
+
+            <h2>17. App Store Additional Terms</h2>
+            <p>If you download our Apps from the Apple App Store, you acknowledge that:</p>
+            <ul>
+                <li>These Terms are between you and TianDev Studio, not Apple</li>
+                <li>Apple has no obligation to provide support or maintenance for our Apps</li>
+                <li>Apple is not responsible for our Apps or any content therein</li>
+                <li>In the event of any failure of an App to conform to any applicable warranty, you may notify Apple for a refund of the purchase price</li>
+                <li>Apple and its subsidiaries are third-party beneficiaries of these Terms with respect to Apps downloaded from the App Store</li>
+            </ul>
+
+            <div class="contact-block">
+                <h2>18. Contact Us</h2>
+                <p>If you have any questions about these Terms of Service, please contact us at:</p>
+                <p><strong>TianDev Studio</strong><br>
+                Email: <a href="mailto:devapptian@gmail.com">devapptian@gmail.com</a><br>
+                Website: <a href="https://www.monkeyapp.stream">www.monkeyapp.stream</a></p>
+                <p style="margin-top:12px;">We aim to respond to all inquiries within 5 business days.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://www.monkeyapp.stream/">Home</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </div>
+        <p>&copy; 2026 TianDev Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

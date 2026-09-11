@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Photo Star - Beautiful Mobile ID Photos</title>
+    <meta name="description" content="Create professional ID photos easily. On-device AI background removal, support for exam and visa sizes, HD output without watermark.">
+    <meta name="keywords" content="ID photo, passport photo, AI background removal, size, visa photo, iOS">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display:flex; align-items:center; gap:.5rem; font-size: 1.2rem; font-weight: 600; color: #667eea; }
+        .logo img { width: 28px; height: 28px; }
+        .nav-links { display:flex; list-style:none; gap:1.5rem; }
+        .nav-links a { text-decoration:none; color:#333; font-weight:500; transition: color .2s; }
+        .nav-links a:hover { color:#667eea; }
+        main { margin-top: 80px; }
+        .hero { text-align:center; padding: 4rem 0; color: white; }
+        .hero h1 { font-size:2.6rem; margin-bottom: .8rem; text-shadow: 2px 2px 4px rgba(0,0,0,.3); }
+        .hero p { font-size:1.1rem; opacity:.92; }
+        .app-icon { width:120px; height:120px; border-radius:25px; margin: 1.5rem auto 2rem; box-shadow: 0 10px 30px rgba(0,0,0,.25); background:#fff; display:flex; align-items:center; justify-content:center; }
+        .app-icon img { width:72px; height:72px; }
+        .cta { display:flex; gap:1rem; justify-content:center; margin-top:1.2rem; }
+        .btn { display:inline-block; background:#007AFF; color:#fff; padding:12px 24px; border-radius:24px; text-decoration:none; font-weight:600; box-shadow:0 5px 15px rgba(0,122,255,.35); transition:transform .2s, box-shadow .2s; }
+        .btn.secondary { background:#ffffff; color:#333; box-shadow:0 5px 15px rgba(255,255,255,.2); border:1px solid #e9ecef; }
+        .btn:hover { transform: translateY(-2px); box-shadow:0 8px 25px rgba(0,122,255,.5); }
+        section { background:#fff; padding:3rem 0; }
+        .section-title { text-align:center; font-size:2rem; margin-bottom:1.6rem; color:#333; }
+        .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+        .card { background:#f8f9fa; border:1px solid #e9ecef; border-radius:14px; padding:1.5rem; }
+        .card h3 { font-size:1.2rem; margin-bottom:.6rem; }
+        .card p { color:#555; }
+        .features-list { list-style:none; display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:.8rem; }
+        .features-list li { background:#f1f5f9; border:1px solid #e2e8f0; border-radius:10px; padding:.8rem 1rem; }
+        footer { background:#333; color:#fff; text-align:center; padding:2rem 0; }
+        .footer-links { display:flex; justify-content:center; gap:1.5rem; margin-bottom:.6rem; }
+        .footer-links a { color:#fff; text-decoration:none; }
+        @media (max-width:768px){ .hero h1{ font-size:2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="../assets/icons/id-photo.svg" alt="IDPhoto"><span>ID Photo Star</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#apps">Back to Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy-en.html">Privacy Policy</a></li>
+                    <li><a href="terms-en.html">Terms of Service</a></li>
+                    <li><a href="index.html">中文</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="app-icon"><img src="../assets/icons/id-photo.svg" alt="ID Photo"></div>
+                <h1>ID Photo Star - Beautiful Mobile ID Photos</h1>
+                <p>Free, simple, fast and intelligent ID photo creation; on-device AI background removal, support for exam and visa sizes, HD output without watermark.</p>
+                <div class="cta">
+                    <a class="btn" href="#" aria-label="App Store">Coming soon to App Store</a>
+                    <a class="btn secondary" href="about.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>AI Background Removal</h3>
+                        <p>Powered by Apple Vision framework, precisely detects portrait and hair details for one-tap background removal.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Multiple Size Presets</h3>
+                        <p>Built-in 1-inch/2-inch and common standards for exams, teaching certifications, and US/Japan/Schengen visas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Background Color Switch</h3>
+                        <p>One-tap red/white/blue backgrounds, with gray, gradient and custom colors supported.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Smart Capture & Quality Check</h3>
+                        <p>Real-time face alignment, posture correction, lighting detection; auto evaluate sharpness/brightness/blink and prompt retake.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Highlights</h2>
+                <ul class="features-list">
+                    <li>Manual retouch: brush and eraser to fine-tune edges</li>
+                    <li>Smart size recommendation: input "US visa" and get matched size and ratio</li>
+                    <li>Free beauty: mild skin smoothing and brightening; Pro supports acne removal, shaping and catchlights</li>
+                    <li>Formal outfit (Pro): AI smart suit or graduation gown</li>
+                    <li>Encrypted cloud album (Pro): secure save and quick access</li>
+                    <li>Printing service: online printing and local stores</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Privacy Commitment</h2>
+                <p>All image processing is done on your device; portrait data is not uploaded. See <a href="privacy-en.html">Privacy Policy</a> for details.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="privacy-en.html">Privacy Policy</a>
+            <a href="terms-en.html">Terms of Service</a>
+            <a href="index.html">中文</a>
+            <a href="../index.html#apps">Back to Home</a>
+        </div>
+        <p>&copy; 2024 TianDev Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

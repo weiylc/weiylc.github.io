@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3 转换器 - 视频/音频一键转 MP3</title>
+  <meta name="description" content="支持视频提取音频与多格式音频转 MP3，批量转换、AI 降噪与去人声（可选），本地处理更安全。">
+  <meta name="keywords" content="MP3 转换, 视频转音频, 音频格式转换, 批量转换, 去人声, iOS 应用">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="MP3 转换器 - 视频/音频一键转 MP3">
+  <meta property="og:description" content="支持视频提取音频与多格式音频转 MP3，批量转换与本地处理">
+  <meta property="og:image" content="../assets/icons/voice-recorder.svg">
+  <meta property="og:url" content="https://www.monkeyapp.stream/MP3/">
+  <script src="../assets/js/lang-router.js" data-index-lang="zh" data-has-en="false"></script>
+  <style>
+    .app-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:80px 0;text-align:center}
+    .app-icon-large{width:120px;height:120px;margin:0 auto 30px;background:#fff;border-radius:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(0,0,0,.1)}
+    .app-icon-large img{width:80px;height:80px}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+    .feature-card{background:#fff;padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center;transition:transform .3s ease}
+    .feature-card:hover{transform:translateY(-4px)}
+    .feature-icon{width:56px;height:56px;margin:0 auto 16px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px}
+    .download-section{background:#f8f9fa;padding:64px 0;text-align:center}
+    .app-store-large{display:inline-block;margin-top:24px}
+    .app-store-large img{height:56px}
+    @media (max-width:768px){.container{padding:0 16px}.feature-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
+  </style>
+  <link rel="canonical" href="https://www.monkeyapp.stream/MP3/">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="../">
+          <img src="../assets/logo.svg" alt="TianDev Studio" class="logo">
+          <span class="brand-name">TianDev Studio</span>
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#apps">Apps</a></li>
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="app-hero">
+    <div class="container">
+      <div class="app-icon-large"><img src="../assets/icons/voice-recorder.svg" alt="MP3 Converter"></div>
+      <h1>MP3 转换器</h1>
+      <h2>MP3 Converter</h2>
+      <p class="hero-subtitle">视频/音频一键提取为 MP3，支持批量与多格式</p>
+      <p>本应用支持从视频提取音频、将多种音频格式转换为 MP3（或 AAC/WAV/M4A），核心处理在设备本地完成，更隐私更高效。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">核心功能</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎬</div>
+          <h3>视频转 MP3</h3>
+          <p>支持从常见视频格式中提取音频并输出为 MP3，高效稳定。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎵</div>
+          <h3>音频格式转换</h3>
+          <p>在本地将音频转换为 MP3/AAC/WAV/M4A，并可自定义码率与质量。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>批量转换</h3>
+          <p>一次选择多个文件批量处理，节省时间，适合重度用户。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI 降噪与去人声（可选）</h3>
+          <p>内置轻量 AI 模型，可选降噪与人声分离，提升音频质量。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>铃声导出</h3>
+          <p>导出为 m4r 格式，由用户在「文件」或 GarageBand 中手动设置为铃声。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📲</div>
+          <h3>多来源导入</h3>
+          <p>支持相册、文件 App、拖拽与分享扩展导入，灵活便捷。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section">
+    <div class="container">
+      <h2>立即下载 MP3 转换器</h2>
+      <p>开始高效、安全的本地音频转换体验</p>
+      <a href="#" class="app-store-large">
+        <img src="../assets/app-store-badge.svg" alt="Download on App Store">
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../assets/logo.svg" alt="TianDev Studio" class="footer-logo">
+          <p class="footer-description">Creating innovative iOS applications for a better digital experience.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="terms_of_service_zh.html">服务条款</a></li>
+              <li><a href="privacy_policy_zh.html">隐私政策</a></li>
+              <li><a href="terms_of_service_en.html">Terms of Service</a></li>
+              <li><a href="privacy_policy_en.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="mailto:devapptian@gmail.com">Help Center</a></li>
+              <li><a href="mailto:devapptian@gmail.com">Feedback</a></li>
+              <li><a href="../#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TianDev Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

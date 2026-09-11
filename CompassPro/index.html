@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Compass Pro - Professional Navigation Tools</title>
+    <meta name="description" content="Professional compass, GPS speedometer, and spirit level tools for iOS. High-precision navigation with magnetic and true north display.">
+    <meta name="keywords" content="compass, GPS speedometer, spirit level, navigation, iOS app, magnetic north, true north">
+    <script src="../assets/js/lang-router.js" data-index-lang="en" data-has-en="false"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Compass Pro - Professional Navigation Tools">
+    <meta property="og:description" content="Professional compass, GPS speedometer, and spirit level tools for iOS">
+    <meta property="og:image" content="../assets/icons/compass-pro.svg">
+    <meta property="og:url" content="https://www.monkeyapp.stream/CompassPro/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-icon-large img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .app-store-large {
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        .app-store-large img {
+            height: 60px;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .screenshot {
+            width: 200px;
+            height: 400px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+        }
+        @media (max-width: 768px){ .container{ padding: 0 16px; } .feature-grid{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="logo">
+                    <span class="brand-name">TianDev Studio</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#apps">Apps</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-icon-large">
+                <img src="../assets/icons/compass-pro.svg" alt="Compass Pro">
+            </div>
+            <h1>Compass Pro</h1>
+            <p class="hero-subtitle">Professional Navigation Tools for iOS</p>
+            <p>High-precision compass, GPS speedometer, and spirit level in one powerful app</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧭</div>
+                    <h3>Professional Compass</h3>
+                    <p>High-precision compass with magnetic and true north display. Real-time direction indication with calibration functionality based on Core Motion framework.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>GPS Speedometer</h3>
+                    <p>Accurate speed measurement using Core Location. Real-time speed display with maximum and average speed statistics. Multiple units support (km/h, mph, knots).</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📐</div>
+                    <h3>Spirit Level</h3>
+                    <p>Bubble level tool based on accelerometer data. Roll and pitch angle display with zero calibration and horizontal status indication.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-language Support</h3>
+                    <p>Supports 13 languages including English, Chinese (Simplified & Traditional), Japanese, German, French, Korean, Spanish, Portuguese, Italian, Arabic, Hindi, and Russian.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Premium Features</h3>
+                    <p>In-app purchase system with lifetime version and subscription options. Ad-free experience for Pro users with purchase restoration functionality.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Native iOS Design</h3>
+                    <p>Built with SwiftUI and Combine for smooth performance. Requires iOS 14.0+ with modern interface design and intuitive user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="screenshots">
+                <div class="screenshot"></div>
+                <div class="screenshot"></div>
+                <div class="screenshot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>System Requirements</h3>
+                    <ul style="text-align: left;">
+                        <li>iOS 14.0 or later</li>
+                        <li>iPhone, iPad, and iPod touch</li>
+                        <li>Location Services required for GPS features</li>
+                        <li>Motion sensors for compass and level</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Core Technologies</h3>
+                    <ul style="text-align: left;">
+                        <li>Swift 5.0+ programming language</li>
+                        <li>SwiftUI + Combine frameworks</li>
+                        <li>Core Motion for sensor data</li>
+                        <li>Core Location for GPS functionality</li>
+                        <li>StoreKit 2 for in-app purchases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2>Download Compass Pro</h2>
+            <p>Get professional navigation tools on your iOS device</p>
+            <a href="https://apps.apple.com/app/compass-pro" class="app-store-large">
+                <img src="../assets/app-store-badge.svg" alt="Download on App Store">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logo.svg" alt="TianDev Studio" class="footer-logo">
+                    <p class="footer-description">Creating innovative iOS applications for a better digital experience.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="mailto:devapptian@gmail.com">Help Center</a></li>
+                            <li><a href="mailto:devapptian@gmail.com">Feedback</a></li>
+                            <li><a href="../#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TianDev Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

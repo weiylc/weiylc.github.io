@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QrCode - 专业二维码扫描与生成</title>
+  <meta name="description" content="QrCode 是一款轻量、快速、隐私友好的 iOS 二维码工具，支持扫码识别、相册识别、二维码生成与分享。">
+  <meta name="keywords" content="二维码,扫码,条形码,二维码生成,隐私,友盟">
+  <script src="../assets/js/lang-router.js" data-index-lang="zh" data-has-en="true"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display:flex; align-items:center; gap:.5rem; font-size: 1.25rem; font-weight: 600; color: #667eea; }
+    .logo img { width: 28px; height: 28px; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+    .nav-links a:hover { color: #667eea; }
+    main { margin-top: 80px; }
+    .hero { text-align: center; padding: 4rem 0; color: #fff; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.25); }
+    .hero p { font-size: 1.15rem; opacity: 0.9; }
+    .app-icon { width: 120px; height: 120px; border-radius: 24px; margin: 1.5rem auto 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); background: #fff; display: flex; align-items: center; justify-content: center; }
+    .app-icon img { width: 72px; height: 72px; }
+    .cta { display:flex; gap:1rem; justify-content:center; margin-top: 1.25rem; }
+    .btn { display:inline-block; background:#007AFF; color:#fff; padding: 12px 22px; border-radius: 12px; text-decoration:none; font-weight:600; box-shadow:0 5px 16px rgba(0,122,255,0.35); }
+    .btn.secondary { background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.4); }
+    .btn:hover { transform: translateY(-1px); }
+    .features { background:#fff; border-radius:16px; margin: 0 auto; padding: 3rem 2rem; max-width: 1100px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
+    .features h2 { text-align:center; font-size: 2rem; margin-bottom: 2rem; }
+    .features-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+    .feature-card { background:#f8f9fa; border:1px solid #e9ecef; border-radius:14px; padding: 1.5rem; }
+    .feature-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+    .feature-card p { color:#666; }
+    .links { text-align:center; margin-top:2rem; }
+    .links a { margin: 0 .75rem; color:#3366ff; }
+    footer { color:#fff; text-align:center; padding: 2rem 0; }
+    @media (max-width:768px){ .hero h1{ font-size:2rem; } .container{ padding: 0 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><img src="../assets/icons/qr-code.svg" alt="QrCode"/> <span>QrCode</span></div>
+        <ul class="nav-links">
+          <li><a href="../index.html#apps">返回首页</a></li>
+          <li><a href="./privacy.html">隐私政策</a></li>
+          <li><a href="./terms.html">服务条款</a></li>
+          <li><a href="./index-en.html">English</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="app-icon"><img src="../assets/icons/qr-code.svg" alt="QrCode"></div>
+        <h1>专业二维码扫描与生成</h1>
+        <p>轻量、快速、隐私友好。支持相机扫码、相册识别、二维码生成与导出分享。</p>
+        <div class="cta">
+          <a class="btn" href="#" aria-disabled="true" onclick="return false;">即将上线 App Store</a>
+          <a class="btn secondary" href="./privacy.html">隐私政策</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="margin-top:-20px;">
+      <div class="features">
+        <h2>核心功能</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>快速扫码</h3>
+            <p>打开相机即刻识别二维码/条形码，结果本地解析不上传。</p>
+          </div>
+          <div class="feature-card">
+            <h3>相册识别</h3>
+            <p>从相册选择图片进行识别，支持保存与分享处理结果。</p>
+          </div>
+          <div class="feature-card">
+            <h3>二维码生成</h3>
+            <p>输入文本、网址或联系人信息，生成高清二维码并导出。</p>
+          </div>
+          <div class="feature-card">
+            <h3>多格式支持</h3>
+            <p>兼容常见条码格式（如 QR、EAN-13、Code128 等）。</p>
+          </div>
+          <div class="feature-card">
+            <h3>隐私保护</h3>
+            <p>采用本地处理与最小化收集原则，无广告、不跟踪内容。</p>
+          </div>
+          <div class="feature-card">
+            <h3>高可用与高性能</h3>
+            <p>冷启动迅速，识别速度优化，适配新款 iPhone 机型。</p>
+          </div>
+        </div>
+        <div class="links">
+          <a href="./privacy.html">隐私政策</a>
+          <a href="./terms.html">服务条款</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 TianDev Studio · <a href="../index.html#contact" style="color:#fff; text-decoration: underline;">联系我们</a> · <a href="./index-en.html" style="color:#fff; text-decoration: underline;">English</a></p>
+    </div>
+  </footer>
+</body>
+</html>
