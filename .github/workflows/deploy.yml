@@ -32,19 +32,12 @@ jobs:
     
     steps:
       - name: 📥 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0  # 获取完整的 git 历史
         
       - name: 🔧 配置 GitHub Pages
-        uses: actions/configure-pages@v4
-        
-      - name: 📦 安装 Node.js（用于可选的构建工具）
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-        continue-on-error: true
+        uses: actions/configure-pages@v5
         
       - name: 🛠️ 构建网站
         run: |
@@ -73,7 +66,7 @@ jobs:
           echo "✅ 静态网站构建完成，准备部署！"
           
       - name: 📤 上传构建产物
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
           
@@ -100,7 +93,7 @@ jobs:
     steps:
       - name: 🌐 部署到 GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         
       - name: 🎉 部署成功通知
         run: |

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.monkeyapp.stream/sitemap.xml
+Sitemap: https://monkeyapp.stream/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
