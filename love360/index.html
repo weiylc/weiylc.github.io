@@ -1,1 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Love360 is a live location and safety app that helps people stay connected with family and trusted contacts.">
+  <title>Love360 — Live Location & Safety</title>
+  <style>
+    :root{--bg:#fff7fa;--card:#fff;--text:#241c22;--muted:#6e626a;--accent:#e84b7a;--accent2:#7b5cff;--line:#eadde3}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fff7fa 0,#fff 52%);line-height:1.65}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1080px;margin:auto;padding:0 24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+    .brand{font-size:24px;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--accent)}
+    nav a{margin-left:22px;color:var(--text);font-weight:600}
+    .hero{padding:84px 0 70px;text-align:center}
+    .pill{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--muted)}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.04;margin:22px auto 20px;max-width:850px;letter-spacing:-2.5px}
+    .lead{max-width:720px;margin:0 auto 30px;font-size:20px;color:var(--muted)}
+    .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 20px;border-radius:12px;background:var(--text);color:#fff;font-weight:700}
+    .btn.alt{background:#fff;color:var(--text);border:1px solid var(--line)}
+    section{padding:58px 0}.section-title{text-align:center;margin-bottom:32px}.section-title h2{font-size:36px;margin:0 0 8px}.section-title p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(45,24,35,.04)}
+    .card h3{margin:8px 0}.card p{margin:0;color:var(--muted)}
+    .icon{font-size:30px}
+    .privacy-note{max-width:800px;margin:auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
+    footer{border-top:1px solid var(--line);margin-top:30px;padding:30px 0;color:var(--muted);font-size:14px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links a{margin-right:18px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}nav{display:none}.hero{padding-top:55px}h1{letter-spacing:-1.5px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Love<span>360</span></div>
+    <nav><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="#download">Download</a></nav>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="pill">Live Location • Connection • Safety</div>
+      <h1>Stay connected with the people who matter.</h1>
+      <p class="lead">Love360 is a live location and safety app designed to help families, couples, and trusted contacts stay connected and share location information with consent.</p>
+      <div class="buttons" id="download">
+        <a class="btn" href="https://apps.apple.com/us/app/love360-live-location-safety/id6759911554">Download on the App Store</a>
+        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.tian.love365">Get it on Google Play</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-title"><h2>Designed for everyday connection</h2><p>Simple tools that help trusted people stay in touch.</p></div>
+      <div class="grid">
+        <div class="card"><div class="icon">📍</div><h3>Location Sharing</h3><p>Share location information with people you choose. Location access depends on your device permissions and the features you enable.</p></div>
+        <div class="card"><div class="icon">🤝</div><h3>Trusted Connections</h3><p>Connect with family, a partner, or other trusted contacts and use Love360 features together.</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3>Privacy Controls</h3><p>You control device permissions and can review or change them through your iOS or Android system settings.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="privacy-note">
+        <h2>Your privacy matters</h2>
+        <p>Love360 uses information only as described in our Privacy Policy. If you choose Google Sign-In, Google account information provided through the sign-in process is used to authenticate your account and provide the requested service.</p>
+        <a href="privacy.html"><strong>Read the Love360 Privacy Policy →</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <div>© 2026 Love360. All rights reserved.</div>
+      <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@monkeyapp.stream">Support</a></div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
