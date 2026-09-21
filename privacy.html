@@ -1,100 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Love360 Privacy Policy">
-  <title>Privacy Policy — Love360</title>
-  <style>
-    :root{--text:#241c22;--muted:#6e626a;--accent:#e84b7a;--line:#eadde3;--bg:#fffafb}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);line-height:1.75}
-    a{color:var(--accent)}.wrap{max-width:850px;margin:auto;padding:0 24px}
-    header{padding:24px 0;border-bottom:1px solid var(--line)}.brand{font-size:23px;font-weight:800;text-decoration:none;color:var(--text)}.brand span{color:var(--accent)}
-    main{background:#fff;margin:42px 0;border:1px solid var(--line);border-radius:20px;padding:clamp(25px,5vw,55px)}
-    h1{font-size:42px;line-height:1.15;margin:0 0 8px}h2{margin-top:36px;font-size:23px}h3{margin-top:24px}
-    .updated{color:var(--muted);margin-bottom:30px}p,li{color:#4f454c}li{margin:8px 0}
-    .notice{background:#fff6f9;border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px}
-    footer{padding:0 0 40px;color:var(--muted);font-size:14px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TianDev Studio</title>
+    <meta name="description" content="Privacy Policy for TianDev Studio apps. Learn how we collect, use, and protect your personal information.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://monkeyapp.stream/privacy-policy.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        .header-nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 24px 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        /* Content */
+        .content-wrapper {
+            max-width: 900px;
+            margin: -40px auto 60px;
+            padding: 0 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 56px 64px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: #f0f4ff;
+            color: #667eea;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 40px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f4ff;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 14px;
+            font-size: 0.97rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+
+        ul li {
+            color: #555;
+            font-size: 0.97rem;
+            padding: 5px 0 5px 22px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: 700;
+            position: absolute;
+            left: 6px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #444;
+        }
+
+        .contact-block {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .contact-block h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+            margin-top: 0;
+        }
+
+        .contact-block p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-block a {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .card { padding: 32px 24px; }
+            .header-nav { display: none; }
+        }
+    </style>
 </head>
 <body>
-<div class="wrap">
-<header><a class="brand" href="index.html">Love<span>360</span></a></header>
-<main>
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: September 22, 2026</p>
 
-<p>This Privacy Policy explains how Love360 ("Love360", "we", "us", or "our") collects, uses, stores, and shares information when you use the Love360 mobile application and related services. Love360 is a live location and safety application available on iOS and Android.</p>
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://monkeyapp.stream/" class="header-logo">TianDev Studio</a>
+            <nav class="header-nav">
+                <a href="https://monkeyapp.stream/">Home</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="notice"><strong>Important:</strong> Location sharing is sensitive. Love360 is intended for consensual use among people who choose to connect. Users should only share or access another person's location with appropriate knowledge and consent.</div>
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p>How we collect, use, and protect your information</p>
+    </div>
 
-<h2>1. Information We Collect</h2>
-<p>Depending on the features you use and the permissions you grant, we may process the following categories of information:</p>
-<ul>
-  <li><strong>Account information:</strong> information used to create or authenticate an account, such as your name, email address, account identifier, and profile information.</li>
-  <li><strong>Google Sign-In information:</strong> if you choose to sign in with Google, we may receive basic account information authorized by you, such as your Google account identifier, name, email address, and profile picture, depending on the scopes requested and granted.</li>
-  <li><strong>Location information:</strong> precise or approximate location information when you enable location-related features and grant the relevant device permissions. Depending on the feature and permissions you select, location processing may occur while the app is in use or in the background.</li>
-  <li><strong>Connection information:</strong> information necessary to connect you with family members, a partner, or other trusted contacts within Love360.</li>
-  <li><strong>Device and technical information:</strong> device type, operating system, app version, identifiers, diagnostics, crash information, and similar technical data used to operate, secure, and improve the service.</li>
-  <li><strong>Communications and support information:</strong> information you provide when contacting us for assistance.</li>
-</ul>
+    <div class="content-wrapper">
+        <div class="card">
+            <span class="last-updated">Last Updated: February 22, 2026</span>
 
-<h2>2. How We Use Information</h2>
-<p>We may use information to:</p>
-<ul>
-  <li>create, authenticate, and maintain your Love360 account;</li>
-  <li>provide location-sharing, connection, and safety-related features that you choose to use;</li>
-  <li>display information to trusted contacts according to the connections and permissions you establish;</li>
-  <li>operate, maintain, troubleshoot, secure, and improve the app;</li>
-  <li>respond to support requests and communicate important service information;</li>
-  <li>prevent fraud, abuse, unauthorized access, and other harmful activity; and</li>
-  <li>comply with applicable legal obligations.</li>
-</ul>
+            <h2>1. Introduction</h2>
+            <p>Welcome to TianDev Studio ("we", "our", or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile applications available on the Apple App Store and Google Play Store (collectively, the "Apps").</p>
+            <p>Please read this policy carefully. If you disagree with its terms, please discontinue use of our Apps.</p>
 
-<h2>3. Google User Data</h2>
-<p>If you use Google Sign-In, Love360 accesses only the Google user data authorized through the OAuth consent process and requested by the app. For basic Google Sign-In, this may include your Google account identifier, name, email address, and profile information.</p>
-<p>We use Google user data to authenticate you, associate your sign-in with your Love360 account, and provide account-related functionality. We do not use Google user data for purposes materially different from those disclosed in this Privacy Policy and the OAuth consent flow.</p>
-<p>Our use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements, where applicable.</p>
+            <h2>2. Information We Collect</h2>
+            <p>We may collect the following types of information depending on which App you use:</p>
 
-<h2>4. Location Data</h2>
-<p>Love360 may require location permissions to provide location-based functionality. We process location information only when the relevant functionality is enabled and subject to the permissions available on your device. You can change location permissions at any time through your device settings. Restricting location permissions may prevent some Love360 features from working correctly.</p>
-<p>When you intentionally connect with trusted contacts and use location-sharing features, location information may be made available to those contacts as necessary to provide the feature.</p>
+            <p><strong>Information You Provide Directly</strong></p>
+            <ul>
+                <li>Account registration details (e.g., name, email address) where applicable</li>
+                <li>Content you create, upload, or process within the Apps (e.g., documents, photos, audio files)</li>
+                <li>Feedback, support requests, or communications you send us</li>
+                <li>In-app purchase and subscription information (processed by Apple App Store or Google Play)</li>
+            </ul>
 
-<h2>5. How We Share Information</h2>
-<p>We do not sell your personal information. We may share or disclose information in the following circumstances:</p>
-<ul>
-  <li><strong>With people you choose:</strong> information, including location information where applicable, may be shared with trusted contacts you connect with through the app.</li>
-  <li><strong>Service providers:</strong> we may use vendors that process information on our behalf to provide infrastructure, authentication, analytics, crash reporting, communications, security, or other operational services.</li>
-  <li><strong>Legal and safety reasons:</strong> we may disclose information when reasonably necessary to comply with law, legal process, protect rights or safety, investigate abuse, or protect the security of Love360 and its users.</li>
-  <li><strong>Business changes:</strong> information may be transferred as part of a merger, acquisition, financing, reorganization, or sale of assets, subject to applicable law.</li>
-</ul>
+            <p><strong>Information Collected Automatically</strong></p>
+            <ul>
+                <li>Device information (device model, operating system version, unique device identifiers)</li>
+                <li>Usage data (features used, session duration, crash reports, performance diagnostics)</li>
+                <li>IP address and approximate geographic location (country/region level)</li>
+                <li>Advertising identifiers (IDFA on iOS, GAID on Android) when advertising is enabled</li>
+            </ul>
 
-<h2>6. Data Retention and Deletion</h2>
-<p>We retain personal information only for as long as reasonably necessary to provide the service, fulfill the purposes described in this policy, meet legal obligations, resolve disputes, and protect the service. Retention periods may vary depending on the type of information and why it is processed.</p>
-<p>You may request deletion of your account and associated personal information by using any account-deletion functionality available in the app or by contacting us at the email address below. Certain information may be retained where required or permitted by law.</p>
+            <p><strong>Information from Third Parties</strong></p>
+            <ul>
+                <li>Analytics data from Firebase (Google Analytics for Firebase)</li>
+                <li>Crash reports from Firebase Crashlytics</li>
+                <li>Advertising data from Google AdMob and associated ad networks</li>
+            </ul>
 
-<h2>7. Data Security</h2>
-<p>We use reasonable administrative, technical, and organizational safeguards designed to protect information against unauthorized access, loss, misuse, or alteration. No electronic transmission or storage method can be guaranteed to be completely secure.</p>
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, operate, and maintain our Apps and their features</li>
+                <li>Process in-app purchases and manage subscription access</li>
+                <li>Improve, personalize, and expand our Apps' functionality</li>
+                <li>Understand and analyze how users interact with our Apps</li>
+                <li>Develop new products, services, and features</li>
+                <li>Send you technical notices, updates, security alerts, and support messages</li>
+                <li>Respond to your comments, questions, and support requests</li>
+                <li>Display relevant advertisements (where applicable) and measure ad performance</li>
+                <li>Detect, prevent, and address fraud, security issues, and technical problems</li>
+                <li>Comply with legal obligations</li>
+            </ul>
 
-<h2>8. Your Choices and Controls</h2>
-<p>You can control many forms of data processing through Love360 and your device settings. This includes permissions for location and other device capabilities. You may also choose not to use Google Sign-In where another sign-in method is offered.</p>
+            <h2>4. Data Processing and Storage</h2>
+            <p>Most of our Apps process your data locally on your device. Files and content you work with (such as documents, audio, or images) are processed on-device and are not uploaded to our servers unless a specific feature explicitly requires it.</p>
 
-<h2>9. Children's Privacy</h2>
-<p>Love360 should be used only by people who meet the minimum age requirements applicable in their jurisdiction and any requirements stated in the applicable app store or our service terms. If we learn that personal information has been collected in violation of applicable children's privacy laws, we will take appropriate steps to address it.</p>
+            <div class="highlight-box">
+                <p><strong>Local Processing:</strong> By default, your personal files remain on your device. We do not transmit your documents, photos, or audio recordings to our servers.</p>
+            </div>
 
-<h2>10. International Processing</h2>
-<p>Your information may be processed in countries other than the country in which you live. Where required, we take appropriate measures for international transfers of personal information in accordance with applicable law.</p>
+            <p>Aggregated, anonymized analytics data may be transmitted to and stored on servers operated by our trusted third-party partners (e.g., Google Firebase) located in the United States and other countries. We ensure appropriate data transfer mechanisms are in place for international transfers.</p>
 
-<h2>11. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy to reflect changes to Love360, our data practices, or applicable requirements. We will update the "Last updated" date when changes are published and provide additional notice when required by law.</p>
+            <h2>5. Advertising and Third-Party Services</h2>
+            <p>Our free Apps may display advertisements served by Google AdMob and its partner networks. These services may use cookies, device identifiers, and similar technologies to serve ads tailored to your interests.</p>
+            <p>Advertising is disabled for users who have an active paid subscription within the App.</p>
+            <p>Third-party ad partners we may work with include:</p>
+            <ul>
+                <li>Google AdMob / Google Ad Manager</li>
+                <li>Meta Audience Network</li>
+                <li>AppLovin</li>
+                <li>Unity Ads</li>
+            </ul>
+            <p>These partners have their own privacy policies governing their data practices. We encourage you to review them. You can opt out of personalized advertising on iOS via Settings > Privacy & Security > Tracking, and on Android via Settings > Google > Ads.</p>
 
-<h2>12. Contact Us</h2>
-<p>If you have questions, privacy requests, or concerns about Love360, contact us at:</p>
-<p><strong>Email:</strong> <a href="mailto:support@monkeyapp.stream">support@monkeyapp.stream</a><br>
-<strong>Website:</strong> <a href="https://monkeyapp.stream/">https://monkeyapp.stream/</a></p>
+            <h2>6. Children's Privacy</h2>
+            <p>Our Apps are not directed to children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children under these ages. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will take steps to remove such information.</p>
 
-</main>
-<footer>© 2026 Love360. <a href="index.html">Back to Love360 home</a></footer>
-</div>
+            <h2>7. Data Retention</h2>
+            <p>We retain your personal information only for as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law. Analytics data is typically retained for 14 months. You can request deletion of your data at any time by contacting us.</p>
+
+            <h2>8. Your Rights and Choices</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                <li><strong>Deletion:</strong> Request deletion of your personal data ("right to be forgotten")</li>
+                <li><strong>Portability:</strong> Request transfer of your data in a machine-readable format</li>
+                <li><strong>Objection:</strong> Object to processing of your data for certain purposes</li>
+                <li><strong>Opt-out of targeted advertising:</strong> Use your device's privacy settings to limit ad tracking</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the information in the Contact Us section below.</p>
+
+            <h2>9. Security</h2>
+            <p>We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+            <h2>10. Links to Third-Party Services</h2>
+            <p>Our Apps may contain links to third-party websites or services. We are not responsible for the privacy practices of those third parties. We encourage you to review their privacy policies before providing any personal information.</p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last Updated" date at the top of this page, and where appropriate, by providing notice within the App. Your continued use of our Apps after any changes constitutes your acceptance of the updated policy.</p>
+
+            <h2>12. Applicable Law</h2>
+            <p>This Privacy Policy is designed to comply with applicable privacy laws, including:</p>
+            <ul>
+                <li>General Data Protection Regulation (GDPR) – European Union</li>
+                <li>California Consumer Privacy Act (CCPA) – California, USA</li>
+                <li>Apple App Store Review Guidelines</li>
+                <li>Google Play Developer Policy</li>
+            </ul>
+
+            <div class="contact-block">
+                <h2>13. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+                <p><strong>TianDev Studio</strong><br>
+                Email: <a href="mailto:devapptian@gmail.com">devapptian@gmail.com</a><br>
+                Website: <a href="https://monkeyapp.stream">monkeyapp.stream</a></p>
+                <p style="margin-top:12px;">We aim to respond to all privacy-related inquiries within 30 days.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://monkeyapp.stream/">Home</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </div>
+        <p>&copy; 2026 TianDev Studio. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
