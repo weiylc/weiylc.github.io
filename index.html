@@ -1,564 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="TianDev Studio">
-    <meta name="theme-color" content="#667eea">
-    
-    <!-- Primary Meta Tags -->
-    <title data-i18n="meta.title">TianDev Studio - Professional iOS Apps</title>
-    <meta name="title" content="TianDev Studio - Professional iOS Apps" data-i18n-attr="content:meta.title">
-    <meta name="description" content="Professional iOS app development studio creating innovative mobile solutions including AI Translator, Clean Master, Compass Pro, and more." data-i18n-attr="content:meta.description">
-    <meta name="keywords" content="iOS apps, mobile development, AI translator, clean master, compass, browser, voice recorder, watermark camera" data-i18n-attr="content:meta.keywords">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://monkeyapp.stream/">
-    
-    <!-- Alternate language versions -->
-    <link rel="alternate" hreflang="en" href="https://monkeyapp.stream/?lang=en">
-    <link rel="alternate" hreflang="zh-CN" href="https://monkeyapp.stream/?lang=zh-CN">
-    <link rel="alternate" hreflang="ja" href="https://monkeyapp.stream/?lang=ja">
-    <link rel="alternate" hreflang="de" href="https://monkeyapp.stream/?lang=de">
-    <link rel="alternate" hreflang="fr" href="https://monkeyapp.stream/?lang=fr">
-    <link rel="alternate" hreflang="ko" href="https://monkeyapp.stream/?lang=ko">
-    <link rel="alternate" hreflang="zh-TW" href="https://monkeyapp.stream/?lang=zh-TW">
-    <link rel="alternate" hreflang="es" href="https://monkeyapp.stream/?lang=es">
-    <link rel="alternate" hreflang="pt" href="https://monkeyapp.stream/?lang=pt">
-    <link rel="alternate" hreflang="it" href="https://monkeyapp.stream/?lang=it">
-    <link rel="alternate" hreflang="ar" href="https://monkeyapp.stream/?lang=ar">
-    <link rel="alternate" hreflang="hi" href="https://monkeyapp.stream/?lang=hi">
-    <link rel="alternate" hreflang="ru" href="https://monkeyapp.stream/?lang=ru">
-    <link rel="alternate" hreflang="x-default" href="https://monkeyapp.stream/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://monkeyapp.stream/">
-    <meta property="og:title" content="TianDev Studio - Professional iOS Apps" data-i18n-attr="content:meta.title">
-    <meta property="og:description" content="Professional iOS app development studio creating innovative mobile solutions including AI Translator, Clean Master, Compass Pro, and more." data-i18n-attr="content:meta.description">
-    <meta property="og:image" content="https://monkeyapp.stream/assets/og-image.svg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="TianDev Studio">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://monkeyapp.stream/">
-    <meta property="twitter:title" content="TianDev Studio - Professional iOS Apps" data-i18n-attr="content:meta.title">
-    <meta property="twitter:description" content="Professional iOS app development studio creating innovative mobile solutions including AI Translator, Clean Master, Compass Pro, and more." data-i18n-attr="content:meta.description">
-    <meta property="twitter:image" content="https://monkeyapp.stream/assets/og-image.svg">
-    <meta property="twitter:creator" content="@tiandevstudio">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/icons/favicon-32x32.svg">
-    <link rel="icon" type="image/svg+xml" sizes="16x16" href="assets/icons/favicon-16x16.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.svg">
-    <link rel="manifest" href="assets/manifest.json">
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json" id="structured-data">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TianDev Studio",
-        "url": "https://monkeyapp.stream/",
-        "logo": "https://monkeyapp.stream/assets/logo.svg",
-        "description": "Professional iOS app development studio creating innovative mobile solutions",
-        "sameAs": [
-            "https://apps.apple.com/developer/tiandev-studio/id123456789",
-            "https://twitter.com/tiandevstudio",
-            "https://github.com/tiandev"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": "devapptian@gmail.com",
-            "availableLanguage": ["English", "Chinese", "Japanese", "German", "French", "Korean", "Spanish", "Portuguese", "Italian", "Arabic", "Hindi", "Russian"]
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Tian Developer"
-        },
-        "foundingDate": "2020",
-        "numberOfEmployees": "1-10",
-        "knowsAbout": ["iOS Development", "Mobile Apps", "AI Translation", "System Optimization", "Navigation Tools"]
-    }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Love360 is a live location and safety app that helps people stay connected with family and trusted contacts.">
+  <title>Love360 — Live Location & Safety</title>
+  <style>
+    :root{--bg:#fff7fa;--card:#fff;--text:#241c22;--muted:#6e626a;--accent:#e84b7a;--accent2:#7b5cff;--line:#eadde3}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fff7fa 0,#fff 52%);line-height:1.65}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1080px;margin:auto;padding:0 24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+    .brand{font-size:24px;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--accent)}
+    nav a{margin-left:22px;color:var(--text);font-weight:600}
+    .hero{padding:84px 0 70px;text-align:center}
+    .pill{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--muted)}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.04;margin:22px auto 20px;max-width:850px;letter-spacing:-2.5px}
+    .lead{max-width:720px;margin:0 auto 30px;font-size:20px;color:var(--muted)}
+    .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 20px;border-radius:12px;background:var(--text);color:#fff;font-weight:700}
+    .btn.alt{background:#fff;color:var(--text);border:1px solid var(--line)}
+    section{padding:58px 0}.section-title{text-align:center;margin-bottom:32px}.section-title h2{font-size:36px;margin:0 0 8px}.section-title p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(45,24,35,.04)}
+    .card h3{margin:8px 0}.card p{margin:0;color:var(--muted)}
+    .icon{font-size:30px}
+    .privacy-note{max-width:800px;margin:auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
+    footer{border-top:1px solid var(--line);margin-top:30px;padding:30px 0;color:var(--muted);font-size:14px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links a{margin-right:18px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}nav{display:none}.hero{padding-top:55px}h1{letter-spacing:-1.5px}}
+  </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <select id="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="zh-CN">简体中文</option>
-            <option value="ja">日本語</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="ko">한국어</option>
-            <option value="zh-TW">繁體中文</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-            <option value="it">Italiano</option>
-            <option value="ar">العربية</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ru">Русский</option>
-        </select>
+<div class="wrap">
+  <header>
+    <div class="brand">Love<span>360</span></div>
+    <nav><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="#download">Download</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pill">Live Location • Connection • Safety</div>
+      <h1>Stay connected with the people who matter.</h1>
+      <p class="lead">Love360 is a live location and safety app designed to help families, couples, and trusted contacts stay connected and share location information with consent.</p>
+      <div class="buttons" id="download">
+        <a class="btn" href="https://apps.apple.com/us/app/love360-live-location-safety/id6759911554">Download on the App Store</a>
+        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.tian.love365">Get it on Google Play</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-title"><h2>Designed for everyday connection</h2><p>Simple tools that help trusted people stay in touch.</p></div>
+      <div class="grid">
+        <div class="card"><div class="icon">📍</div><h3>Location Sharing</h3><p>Share location information with people you choose. Location access depends on your device permissions and the features you enable.</p></div>
+        <div class="card"><div class="icon">🤝</div><h3>Trusted Connections</h3><p>Connect with family, a partner, or other trusted contacts and use Love360 features together.</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3>Privacy Controls</h3><p>You control device permissions and can review or change them through your iOS or Android system settings.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="privacy-note">
+        <h2>Your privacy matters</h2>
+        <p>Love360 uses information only as described in our Privacy Policy. If you choose Google Sign-In, Google account information provided through the sign-in process is used to authenticate your account and provide the requested service.</p>
+        <a href="privacy.html"><strong>Read the Love360 Privacy Policy →</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <div>© 2026 Love360. All rights reserved.</div>
+      <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@monkeyapp.stream">Support</a></div>
     </div>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <img src="assets/logo.svg" alt="TianDev Studio" class="logo">
-                <span class="brand-name" data-i18n="brand_name">TianDev Studio</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" data-i18n="nav.home">Home</a></li>
-                <li><a href="#apps" data-i18n="nav.apps">Apps</a></li>
-                <li><a href="#about" data-i18n="nav.about">About</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-i18n="hero_title">Professional iOS App Development</h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">Creating innovative mobile solutions that enhance your digital life</p>
-                <div class="hero-buttons">
-                    <a href="#apps" class="btn btn-primary" data-i18n="hero_explore_apps">Explore Our Apps</a>
-                    <a href="#contact" class="btn btn-secondary" data-i18n="hero_contact">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/hero-phones.svg" alt="iOS Apps" class="phones-mockup">
-            </div>
-        </div>
-    </section>
-
-    <!-- Apps Section -->
-    <section id="apps" class="apps">
-        <div class="container">
-            <h2 class="section-title" data-i18n="apps_title">Our Apps</h2>
-            <p class="section-subtitle" data-i18n="apps_subtitle">Discover our collection of professional iOS applications</p>
-            
-            <div class="apps-grid">
-                <!-- IDPhoto / Passport Photo Maker -->
-                <div class="app-card" onclick="window.location.href='IDPhoto/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/id-photo.svg" alt="ID Photo" loading="lazy">
-                    </div>
-                    <h3 class="app-name">证照之星</h3>
-                    <p class="app-description">免费AI抠图换底，支持考试与签证规格，高清无水印</p>
-                    <div class="app-features">
-                        <span class="feature-tag">AI抠图</span>
-                        <span class="feature-tag">多规格尺寸</span>
-                        <span class="feature-tag">红白蓝背景</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-                <!-- PicJointer / Photo Collage -->
-                <div class="app-card" onclick="window.location.href='PicJointer/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/watermark-cam.svg" alt="PicJointer" loading="lazy">
-                    </div>
-                    <h3 class="app-name">PicJointer 拼图相册</h3>
-                    <p class="app-description">多图拼接、滤镜调色与海报模板，高清导出</p>
-                    <div class="app-features">
-                        <span class="feature-tag">拼图布局</span>
-                        <span class="feature-tag">滤镜调色</span>
-                        <span class="feature-tag">高清导出</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-                <!-- AI Translator -->
-                <div class="app-card" onclick="window.location.href='AITranslator/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/ai-translator.svg" alt="AI Translator" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_ai_translator_name">AI Translator</h3>
-                    <p class="app-description" data-i18n="app_ai_translator_desc">Intelligent multi-language translation powered by Google ML Kit</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_offline">Offline Translation</span>
-                        <span class="feature-tag" data-i18n="feature_20_languages">20+ Languages</span>
-                        <span class="feature-tag" data-i18n="feature_real_time">Real-time</span>
-                    </div>
-                    <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- Clean Master -->
-                <div class="app-card" onclick="window.location.href='CleanMaster/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/clean-master.svg" alt="Clean Master" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_clean_master_name">Clean Master</h3>
-                    <p class="app-description" data-i18n="app_clean_master_desc">Powerful iPhone storage cleaner to free up space efficiently</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_photo_cleanup">Photo Cleanup</span>
-                        <span class="feature-tag" data-i18n="feature_cache_cleaner">Cache Cleaner</span>
-                        <span class="feature-tag" data-i18n="feature_storage_analysis">Storage Analysis</span>
-                    </div>
-                    <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- Compass Pro -->
-                <div class="app-card" onclick="window.location.href='CompassPro/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/compass-pro.svg" alt="Compass Pro" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_compass_pro_name">Compass Pro</h3>
-                    <p class="app-description" data-i18n="app_compass_pro_desc">Professional compass, GPS speedometer, and spirit level tools</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_compass">Compass</span>
-                        <span class="feature-tag" data-i18n="feature_gps_speed">GPS Speed</span>
-                        <span class="feature-tag" data-i18n="feature_spirit_level">Spirit Level</span>
-                    </div>
-                    <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <div class="app-card" onclick="window.location.href='Speedometer/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/compass-pro.svg" alt="Speedometer" loading="lazy">
-                    </div>
-                    <h3 class="app-name">测速仪 Speedometer</h3>
-                    <p class="app-description">基于GPS与传感器的专业设备测试与速度测量，实时仪表盘展示</p>
-                    <div class="app-features">
-                        <span class="feature-tag">GPS速度</span>
-                        <span class="feature-tag">加速度计</span>
-                        <span class="feature-tag">数据导出</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- QrCode -->
-                <div class="app-card" onclick="window.location.href='QrCode/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/qr-code.svg" alt="QrCode" loading="lazy">
-                    </div>
-                    <h3 class="app-name">QrCode</h3>
-                    <p class="app-description">专业的二维码扫描与生成工具，轻量快速、隐私友好</p>
-                    <div class="app-features">
-                        <span class="feature-tag">快速扫码</span>
-                        <span class="feature-tag">相册识别</span>
-                        <span class="feature-tag">二维码生成</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- PDFConverter -->
-                <div class="app-card" onclick="window.location.href='PDFConverter/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/pdf-converter.svg" alt="PDFConverter" loading="lazy">
-                    </div>
-                    <h3 class="app-name">PDFConverter</h3>
-                    <p class="app-description">PDF 转换与合并/拆分/压缩，端侧本地处理更安全</p>
-                    <div class="app-features">
-                        <span class="feature-tag">PDF转换</span>
-                        <span class="feature-tag">合并拆分</span>
-                        <span class="feature-tag">压缩优化</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- Petal Browser -->
-                <div class="app-card" onclick="window.location.href='HbBrowser/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/petal-browser.svg" alt="Petal Browser" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_petal_browser_name">Petal Browser</h3>
-                    <p class="app-description" data-i18n="app_petal_browser_desc">Privacy-focused browser with ad blocking and secure browsing</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_ad_block">Ad Blocker</span>
-                        <span class="feature-tag" data-i18n="feature_privacy">Privacy Protection</span>
-                        <span class="feature-tag" data-i18n="feature_fast_browsing">Fast Browsing</span>
-                    </div>
-                    <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-
-
-                <!-- Voice Recorder -->
-                <div class="app-card" onclick="window.location.href='VoiceRecorderApp/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/voice-recorder.svg" alt="Voice Recorder" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_voice_recorder_name">Voice Recorder</h3>
-                    <p class="app-description" data-i18n="app_voice_recorder_desc">AI-powered voice to text transcription with high accuracy</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_ai_transcription">AI Transcription</span>
-                        <span class="feature-tag" data-i18n="feature_high_quality">High Quality</span>
-                        <span class="feature-tag" data-i18n="feature_text_editing">Text Editing</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- Audio Editor -->
-                <div class="app-card" onclick="window.location.href='AudioEditor/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/audio-editor.svg" alt="Audio Editor" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_audio_editor_name">Audio Editor</h3>
-                    <p class="app-description" data-i18n="app_audio_editor_desc">Professional audio editing with AI-powered effects and batch processing</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_ai_effects">AI Effects</span>
-                        <span class="feature-tag" data-i18n="feature_batch_processing">Batch Processing</span>
-                        <span class="feature-tag" data-i18n="feature_format_conversion">Format Conversion</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-                
-                <!-- MP3 Converter -->
-                <div class="app-card" onclick="window.location.href='MP3/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/voice-recorder.svg" alt="MP3 Converter" loading="lazy">
-                    </div>
-                    <h3 class="app-name">MP3 转换器</h3>
-                    <p class="app-description">视频/音频转 MP3，支持批量与多格式，本地处理更安全</p>
-                    <div class="app-features">
-                        <span class="feature-tag">视频转音频</span>
-                        <span class="feature-tag">音频转MP3</span>
-                        <span class="feature-tag">批量转换</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- WaterMark Camera -->
-                <div class="app-card" onclick="window.location.href='WatermarkCam/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/watermark-cam.svg" alt="WaterMark Camera" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_watermark_camera_name">WaterMark Camera</h3>
-                    <p class="app-description" data-i18n="app_watermark_camera_desc">Professional watermark camera for work check-in and attendance</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_work_checkin">Work Check-in</span>
-                        <span class="feature-tag" data-i18n="feature_timestamp">Timestamp</span>
-                        <span class="feature-tag" data-i18n="feature_location">Location</span>
-                    </div>
-                    <a href="https://apps.apple.com/cn/app/id6754108984" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- Bazi Master -->
-                <div class="app-card" onclick="window.location.href='Bazi/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/bazi-master.svg" alt="Bazi Master" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_bazi_master_name">五行八字大师</h3>
-                    <p class="app-description" data-i18n="app_bazi_master_desc">Professional Chinese astrology and fortune telling app with Bazi analysis</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_bazi_chart">八字排盘</span>
-                        <span class="feature-tag" data-i18n="feature_lunar_calendar">农历转换</span>
-                        <span class="feature-tag" data-i18n="feature_divination">周易占卜</span>
-                    </div>
-                    <a href="Bazi/" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-
-                <!-- AI Appearance -->
-                <div class="app-card" onclick="window.location.href='AIAppearance/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/ai-appearance.svg" alt="AI测颜值" loading="lazy">
-                    </div>
-                    <h3 class="app-name" data-i18n="app_ai_appearance_name">AI测颜值</h3>
-                    <p class="app-description" data-i18n="app_ai_appearance_desc">AI-powered facial analysis and beauty scoring app for entertainment</p>
-                    <div class="app-features">
-                        <span class="feature-tag" data-i18n="feature_ai_analysis">AI分析</span>
-                        <span class="feature-tag" data-i18n="feature_beauty_score">颜值评分</span>
-                        <span class="feature-tag" data-i18n="feature_13_languages">13种语言</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-                <div class="app-card" onclick="window.location.href='HolyBible/'" style="cursor: pointer;">
-                    <div class="app-icon">
-                        <img src="assets/icons/apple-touch-icon.svg" alt="Holy Bible" loading="lazy">
-                    </div>
-                    <h3 class="app-name">圣经 Holy Bible</h3>
-                    <p class="app-description">离线圣经阅读、多版本支持、AI 灵修与祷告</p>
-                    <div class="app-features">
-                        <span class="feature-tag">多语言版本</span>
-                        <span class="feature-tag">离线阅读</span>
-                        <span class="feature-tag">AI灵修</span>
-                    </div>
-                    <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title" data-i18n="about_title">About TianDev Studio</h2>
-                    <p class="about-description" data-i18n="about_description">We are a passionate iOS development studio dedicated to creating high-quality mobile applications that solve real-world problems. Our apps are designed with user experience in mind, featuring modern interfaces and powerful functionality.</p>
-                    <div class="features-grid">
-                        <div class="feature-item" data-aos="fade-up">
-                            <div class="feature-icon">
-                                <img src="assets/icons/feature-multilingual.svg" alt="Multi-language Support" loading="lazy">
-                            </div>
-                            <h3 data-i18n="feature_multilingual_title">Multi-language Support</h3>
-                            <p data-i18n="feature_multilingual_desc">Support for 12+ languages including English, Chinese, Japanese, Arabic, and more</p>
-                        </div>
-                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                            <div class="feature-icon">
-                                <img src="assets/icons/feature-responsive.svg" alt="Responsive Design" loading="lazy">
-                            </div>
-                            <h3 data-i18n="feature_responsive_title">Responsive Design</h3>
-                            <p data-i18n="feature_responsive_desc">Optimized for all devices - desktop, tablet, and mobile</p>
-                        </div>
-                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                            <div class="feature-icon">
-                                <img src="assets/icons/feature-performance.svg" alt="High Performance" loading="lazy">
-                            </div>
-                            <h3 data-i18n="feature_performance_title">High Performance</h3>
-                            <p data-i18n="feature_performance_desc">Fast loading times and smooth user experience</p>
-                        </div>
-                        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                            <div class="feature-icon">
-                                <img src="assets/icons/feature-security.svg" alt="Security First" loading="lazy">
-                            </div>
-                            <h3 data-i18n="feature_security_title">Security First</h3>
-                            <p data-i18n="feature_security_desc">Built with security and privacy as top priorities</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="assets/about-illustration.svg" alt="About Us">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact_title">Get in Touch</h2>
-            <p class="section-subtitle" data-i18n="contact_subtitle">Have questions or want to collaborate? We'd love to hear from you.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h3 data-i18n="contact_email_title">Email</h3>
-                            <p>devapptian@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🏢</div>
-                        <div class="contact-details">
-                            <h3 data-i18n="contact_business_title">Business Inquiries</h3>
-                            <p>devapptian@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🛠️</div>
-                        <div class="contact-details">
-                            <h3 data-i18n="contact_support_title">Support</h3>
-                            <p>devapptian@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/logo.svg" alt="TianDev Studio" class="footer-logo">
-                    <p class="footer-description" data-i18n="footer_description">Creating innovative iOS applications for a better digital experience.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 data-i18n="footer_apps_title">Apps</h4>
-                        <ul>
-                            <li><a href="IDPhoto/">证照之星</a></li>
-                            <li><a href="#" data-i18n="app_ai_translator_name">AI Translator</a></li>
-                            <li><a href="#" data-i18n="app_clean_master_name">Clean Master</a></li>
-                            <li><a href="#" data-i18n="app_compass_pro_name">Compass Pro</a></li>
-                            <li><a href="AudioEditor/" data-i18n="app_audio_editor_name">Audio Editor</a></li>
-                            <li><a href="AIAppearance/" data-i18n="app_ai_appearance_name">AI测颜值</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 data-i18n="footer_company_title">Company</h4>
-                        <ul>
-                            <li><a href="#about" data-i18n="nav_about">About</a></li>
-                            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                            <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 data-i18n="footer_support_title">Support</h4>
-                        <ul>
-                            <li><a href="mailto:devapptian@gmail.com" data-i18n="footer_help">Help Center</a></li>
-                            <li><a href="mailto:devapptian@gmail.com" data-i18n="footer_feedback">Feedback</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 TianDev Studio. <span data-i18n="footer_rights">All rights reserved.</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
+  </footer>
+</div>
 </body>
 </html>
