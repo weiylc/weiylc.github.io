@@ -49,7 +49,7 @@ const translations = {
         'footer_privacy': 'Privacy Policy',
         'footer_terms': 'Terms of Service',
         'footer_contact': 'Contact Us',
-        'footer_copyright': '© 2024 ForApp Store. All rights reserved.',
+        'footer_copyright': '© 2024 Monkey APP Studio. All rights reserved.',
         'footer_disclaimer': 'This app is for entertainment purposes only and should not be used for professional assessment.'
     },
     
@@ -103,7 +103,7 @@ const translations = {
         'footer_privacy': '隐私政策',
         'footer_terms': '服务条款',
         'footer_contact': '联系我们',
-        'footer_copyright': '© 2024 ForApp Store. 保留所有权利。',
+        'footer_copyright': '© 2024 Monkey APP Studio. 保留所有权利。',
         'footer_disclaimer': '本应用仅供娱乐使用，不应用于专业评估。'
     }
 };

@@ -267,6 +267,7 @@ body {
 .app-store-btn {
     display: inline-block;
     transition: transform 0.3s ease;
+    margin: 4px;
 }
 
 .app-store-btn:hover {
@@ -276,6 +277,20 @@ body {
 .app-store-btn img {
     height: 50px;
     width: auto;
+    display: block;
+}
+
+.download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.download-buttons .app-store-btn {
+    margin: 0;
 }
 
 /* About Section */

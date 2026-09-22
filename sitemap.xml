@@ -2,29 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://monkeyapp.stream/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://monkeyapp.stream/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://monkeyapp.stream/?lang=zh-CN"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://monkeyapp.stream/?lang=ja"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://monkeyapp.stream/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://monkeyapp.stream/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://monkeyapp.stream/?lang=ko"/>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://monkeyapp.stream/?lang=zh-TW"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://monkeyapp.stream/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://monkeyapp.stream/?lang=pt"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://monkeyapp.stream/?lang=it"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://monkeyapp.stream/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://monkeyapp.stream/?lang=hi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://monkeyapp.stream/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://monkeyapp.stream/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://monkeyapp.stream/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://monkeyapp.stream/index-zh-TW.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://monkeyapp.stream/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://monkeyapp.stream/index-ko.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://monkeyapp.stream/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monkeyapp.stream/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://monkeyapp.stream/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://monkeyapp.stream/index-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://monkeyapp.stream/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://monkeyapp.stream/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://monkeyapp.stream/index-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://monkeyapp.stream/index-ru.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://monkeyapp.stream/"/>
+  </url>
+  
+  <!-- Language-specific homepages -->
+  <url>
+    <loc>https://monkeyapp.stream/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-zh.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-zh-TW.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-ja.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-ko.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-de.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-fr.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-es.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-pt.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-it.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-ar.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-hi.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/index-ru.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
   <!-- Apps Section -->
   <url>
     <loc>https://monkeyapp.stream/#apps</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,7 +112,7 @@
   <!-- About Section -->
   <url>
     <loc>https://monkeyapp.stream/#about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,25 +120,131 @@
   <!-- Contact Section -->
   <url>
     <loc>https://monkeyapp.stream/#contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- App Pages -->
   <url>
-    <loc>https://monkeyapp.stream/Metronome/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://monkeyapp.stream/IDPhoto/</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monkeyapp.stream/Metronome/privacy-policy.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://monkeyapp.stream/PicJointer/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/AITranslator/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/CleanMaster/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/CompassPro/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/Speedometer/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/QrCode/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/PDFConverter/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/VoiceRecorderApp/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/AudioEditor/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/MP3/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/WatermarkCam/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/HolyBible/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/love360/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/Metronome/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/Bazi/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/AIAppearance/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://monkeyapp.stream/HbBrowser/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://monkeyapp.stream/privacy.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://monkeyapp.stream/Metronome/terms-of-service.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://monkeyapp.stream/terms-of-service.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

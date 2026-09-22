@@ -1252,7 +1252,7 @@ class LanguageManager {
             'ru': 'Русский'
         };
 
-        const selector = document.getElementById('language-selector');
+        const selector = document.getElementById('language-select');
         if (!selector) return;
 
         // Clear existing options
@@ -1276,13 +1276,22 @@ class LanguageManager {
         this.currentLanguage = newLang;
         localStorage.setItem('preferred-language', newLang);
         
-        // Update URL without reload
-        const url = new URL(window.location);
-        url.searchParams.set('lang', newLang);
-        window.history.replaceState({}, '', url);
-        
+        // 先应用翻译（作为过渡效果）
         this.applyTranslations();
         this.updateDocumentDirection();
+        
+        // 根据语言跳转到对应物理页面
+        let targetPage = 'index.html';
+        if (newLang === 'zh-CN' || newLang === 'zh-TW') {
+            targetPage = 'index-zh.html';
+        } else {
+            targetPage = 'index.html';
+        }
+        
+        // 跳转到目标页面
+        const currentPath = window.location.pathname;
+        const dir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+        window.location.href = dir + targetPage;
     }
 
     applyTranslations() {
@@ -1323,7 +1332,7 @@ class LanguageManager {
     }
 
     bindEvents() {
-        const selector = document.getElementById('language-selector');
+        const selector = document.getElementById('language-select');
         if (selector) {
             selector.addEventListener('change', (e) => {
                 this.changeLanguage(e.target.value);
@@ -1339,3 +1348,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export for global access
 window.translations = translations;
+
+// Global changeLanguage function for inline onchange handlers
+window.changeLanguage = function(newLang) {
+    if (window.languageManager) {
+        window.languageManager.changeLanguage(newLang);
+    }
+};

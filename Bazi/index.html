@@ -1,275 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>五行八字大师 - 专业八字命理分析应用</title>
-    <meta name="description" content="五行八字大师是一款专业的八字命理分析iOS应用，支持八字排盘、农历转换、五行分析、周易占卜等功能。">
-    <meta name="keywords" content="八字,命理,五行,占卜,周易,紫微斗数,黄历,iOS应用">
-    <script src="../assets/js/lang-router.js" data-index-lang="zh" data-has-en="true"></script>
-    
+    <title>Bazi Master - Professional Fortune Analysis</title>
+    <meta name="description" content="Bazi Master is a professional iOS app for traditional fortune analysis including Bazi charting, lunar calendar, Five Elements analysis, I Ching divination, and more.">
+    <meta name="keywords" content="bazi, fortune, five elements, divination, i ching, ziwei, lunar calendar, iOS app">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #667eea;
-        }
-        
-        main {
-            margin-top: 80px;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 25px;
-            margin: 0 auto 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: #007AFF;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 122, 255, 0.4);
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 122, 255, 0.6);
-        }
-        @media (max-width: 768px){
-            .hero h1{ font-size: 2rem; }
-            .container{ padding: 0 16px; }
-        }
-        
-        .features {
-            background: white;
-            padding: 4rem 0;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e9ecef;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .screenshots {
-            background: #f8f9fa;
-            padding: 4rem 0;
-        }
-        
-        .screenshots h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-        
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .screenshot {
-            background: white;
-            border-radius: 15px;
-            padding: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .screenshot-placeholder {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #667eea;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #667eea; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #667eea; }
+        main { margin-top: 80px; }
+        .hero { text-align: center; padding: 4rem 0; color: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+        .app-icon { width: 120px; height: 120px; border-radius: 25px; margin: 0 auto 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); background: linear-gradient(45deg, #ff6b6b, #feca57); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .download-btn { display: inline-block; background: #007AFF; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 5px 15px rgba(0, 122, 255, 0.4); }
+        .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 122, 255, 0.6); }
+        .features { background: white; padding: 4rem 0; }
+        .features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .feature-card { background: #f8f9fa; padding: 2rem; border-radius: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #e9ecef; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #333; }
+        .feature-card p { color: #666; line-height: 1.6; }
+        .screenshots { background: #f8f9fa; padding: 4rem 0; }
+        .screenshots h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333; }
+        .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto; }
+        .screenshot { background: white; border-radius: 15px; padding: 1rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center; }
+        .screenshot-placeholder { width: 100%; height: 400px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-bottom: 1rem; }
+        footer { background: #333; color: white; text-align: center; padding: 2rem 0; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+        .footer-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #667eea; }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .features-grid { grid-template-columns: 1fr; }
+            .screenshot-grid { grid-template-columns: 1fr; }
         }
     </style>
+<script src="../assets/js/ga.js"></script>
 </head>
 <body>
     <header>
         <nav class="container">
             <div class="logo">
-                <a href="../" style="text-decoration: none; color: inherit;">五行八字大师</a>
+                <a href="../" style="text-decoration: none; color: inherit;">Bazi Master</a>
             </div>
             <ul class="nav-links">
-                <li><a href="../index.html#apps">返回主页</a></li>
-                <li><a href="#features">功能特色</a></li>
-                <li><a href="#screenshots">应用截图</a></li>
-                <li><a href="privacy-policy.html">隐私政策</a></li>
-                <li><a href="terms-of-service.html">服务条款</a></li>
-                <li><a href="index-en.html">English</a></li>
+                <li><a href="../index.html#apps">Back to Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="privacy-policy-en.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service-en.html">Terms of Service</a></li>
+                <li><a href="index-zh.html">中文</a></li>
             </ul>
         </nav>
     </header>
@@ -278,50 +70,45 @@
         <section class="hero">
             <div class="container">
                 <div class="app-icon">🔮</div>
-                <h1>五行八字大师</h1>
-                <p>专业的八字命理分析应用，传统智慧与现代科技的完美结合</p>
-                <a href="#" class="download-btn">App Store 下载</a>
+                <h1>Bazi Master</h1>
+                <p>Professional fortune analysis app combining traditional wisdom and modern technology</p>
+                <a href="#" class="download-btn" aria-disabled="true" onclick="return false;">Coming Soon on App Store</a>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2>功能特色</h2>
+                <h2>Key Features</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">📊</div>
-                        <h3>八字排盘</h3>
-                        <p>精准的四柱八字计算，支持农历转换，五行强弱分析，十神关系计算，为您提供专业的命理分析。</p>
+                        <h3>Bazi Charting</h3>
+                        <p>Accurate Four Pillars calculation with lunar calendar conversion, Five Elements strength analysis, and Ten Gods relationships.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon">🌙</div>
-                        <h3>黄历查询</h3>
-                        <p>传统黄历信息查询，包含节气、宜忌事项、吉凶方位等，帮助您选择合适的时机。</p>
+                        <h3>Lunar Calendar</h3>
+                        <p>Traditional almanac information including solar terms, auspicious/inauspicious activities, and favorable directions.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon">🎯</div>
-                        <h3>周易占卜</h3>
-                        <p>提供4种起卦方式，完整的64卦象数据库，专业的卦象解读，传承千年的占卜智慧。</p>
+                        <h3>I Ching Divination</h3>
+                        <p>Four divination methods with a complete database of 64 hexagrams and professional interpretations.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon">⭐</div>
-                        <h3>紫微斗数</h3>
-                        <p>紫微斗数排盘分析，十二宫位详解，星曜组合解读，为您揭示人生运势轨迹。</p>
+                        <h3>Ziwei Doushu</h3>
+                        <p>Ziwei astrology chart analysis with twelve palaces and star combination interpretations.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon">📚</div>
-                        <h3>命理学堂</h3>
-                        <p>丰富的命理知识库，包含八字基础、五行理论、十神详解等8个分类，助您深入学习。</p>
+                        <h3>Knowledge Base</h3>
+                        <p>Rich resources covering Bazi basics, Five Elements theory, and Ten Gods explanations.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon">💎</div>
-                        <h3>会员服务</h3>
-                        <p>提供3天免费试用，解锁全部功能，无限次使用，享受专业的命理分析服务。</p>
+                        <h3>Membership Service</h3>
+                        <p>3-day free trial to unlock all features and enjoy professional analysis services.</p>
                     </div>
                 </div>
             </div>
@@ -329,21 +116,19 @@
 
         <section id="screenshots" class="screenshots">
             <div class="container">
-                <h2>应用截图</h2>
+                <h2>Screenshots</h2>
                 <div class="screenshot-grid">
                     <div class="screenshot">
-                        <div class="screenshot-placeholder">八字排盘界面</div>
-                        <h4>精准八字计算</h4>
+                        <div class="screenshot-placeholder">Bazi Chart Interface</div>
+                        <h4>Accurate Bazi Calculation</h4>
                     </div>
-                    
                     <div class="screenshot">
-                        <div class="screenshot-placeholder">黄历查询界面</div>
-                        <h4>传统黄历信息</h4>
+                        <div class="screenshot-placeholder">Lunar Calendar Interface</div>
+                        <h4>Traditional Almanac Info</h4>
                     </div>
-                    
                     <div class="screenshot">
-                        <div class="screenshot-placeholder">周易占卜界面</div>
-                        <h4>周易占卜功能</h4>
+                        <div class="screenshot-placeholder">Divination Interface</div>
+                        <h4>I Ching Divination</h4>
                     </div>
                 </div>
             </div>
@@ -353,12 +138,12 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy-policy.html">隐私政策</a>
-                <a href="terms-of-service.html">服务条款</a>
-                <a href="mailto:devapptian@gmail.com">联系我们</a>
-                <a href="index-en.html">English</a>
+                <a href="privacy-policy-en.html">Privacy Policy</a>
+                <a href="terms-of-service-en.html">Terms of Service</a>
+                <a href="mailto:devapptian@gmail.com">Contact Us</a>
+                <a href="index-zh.html">中文</a>
             </div>
-            <p>&copy; 2025 TianDev Studio. 保留所有权利。</p>
+            <p>&copy; 2025 TianDev Studio. All rights reserved.</p>
         </div>
     </footer>
 </body>
