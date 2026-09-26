@@ -1,113 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QrCode - Professional QR Code Scanner & Generator</title>
-  <meta name="description" content="QrCode is a lightweight, fast, privacy-friendly iOS tool for scanning, recognizing, generating, and sharing QR codes.">
-  <meta name="keywords" content="QR code, barcode, QR generator, privacy, scan">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-    nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo { display:flex; align-items:center; gap:.5rem; font-size: 1.25rem; font-weight: 600; color: #667eea; }
-    .logo img { width: 28px; height: 28px; }
-    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
-    .nav-links a { text-decoration: none; color: #333; font-weight: 500; }
-    .nav-links a:hover { color: #667eea; }
-    main { margin-top: 80px; }
-    .hero { text-align: center; padding: 4rem 0; color: #fff; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.25); }
-    .hero p { font-size: 1.15rem; opacity: 0.9; }
-    .app-icon { width: 120px; height: 120px; border-radius: 24px; margin: 1.5rem auto 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); background: #fff; display: flex; align-items: center; justify-content: center; }
-    .app-icon img { width: 72px; height: 72px; }
-    .cta { display:flex; gap:1rem; justify-content:center; margin-top: 1.25rem; }
-    .btn { display:inline-block; background:#007AFF; color:#fff; padding: 12px 22px; border-radius: 12px; text-decoration:none; font-weight:600; box-shadow:0 5px 16px rgba(0,122,255,0.35); }
-    .btn.secondary { background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.4); }
-    .btn:hover { transform: translateY(-1px); }
-    .features { background:#fff; border-radius:16px; margin: 0 auto; padding: 3rem 2rem; max-width: 1100px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
-    .features h2 { text-align:center; font-size: 2rem; margin-bottom: 2rem; }
-    .features-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-    .feature-card { background:#f8f9fa; border:1px solid #e9ecef; border-radius:14px; padding: 1.5rem; }
-    .feature-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
-    .feature-card p { color:#666; }
-    .links { text-align:center; margin-top:2rem; }
-    .links a { margin: 0 .75rem; color:#3366ff; }
-    footer { color:#fff; text-align:center; padding: 2rem 0; }
-  </style>
-<script src="../assets/js/ga.js"></script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo"><img src="../assets/icons/qr-code.svg" alt="QrCode"/> <span>QrCode</span></div>
-        <ul class="nav-links">
-          <li><a href="../index.html#apps">Back to Home</a></li>
-          <li><a href="./privacy-en.html">Privacy Policy</a></li>
-          <li><a href="./terms-en.html">Terms of Service</a></li>
-          <li><a href="index-zh.html">中文</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="app-icon"><img src="../assets/icons/qr-code.svg" alt="QrCode"></div>
-        <h1>Professional QR Code Scanner & Generator</h1>
-        <p>Lightweight, fast, and privacy-friendly. Scan with camera, recognize from album, generate and share QR codes.</p>
-        <div class="cta">
-          <a class="btn" href="#" aria-disabled="true" onclick="return false;">Coming Soon on App Store</a>
-          <a class="btn secondary" href="./privacy-en.html">Privacy Policy</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container" style="margin-top:-20px;">
-      <div class="features">
-        <h2>Core Features</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Fast Scanning</h3>
-            <p>Instantly recognize QR/barcodes with the camera. Local parsing, no upload.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Album Recognition</h3>
-            <p>Select images from album for recognition. Support saving and sharing results.</p>
-          </div>
-          <div class="feature-card">
-            <h3>QR Code Generation</h3>
-            <p>Generate high-quality QR codes from text, URLs, or contacts and export.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Multiple Formats</h3>
-            <p>Support common barcode formats (QR, EAN-13, Code128, etc.).</p>
-          </div>
-          <div class="feature-card">
-            <h3>Privacy Protection</h3>
-            <p>Local processing and minimal collection. No ads, no content tracking.</p>
-          </div>
-          <div class="feature-card">
-            <h3>High Availability & Performance</h3>
-            <p>Fast cold start and optimized recognition speed. Adapted to new iPhone models.</p>
-          </div>
-        </div>
-        <div class="links">
-          <a href="./privacy-en.html">Privacy Policy</a>
-          <a href="./terms-en.html">Terms of Service</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 TianDev Studio · <a href="../index.html#contact" style="color:#fff; text-decoration: underline;">Contact</a> · <a href="index-zh.html" style="color:#fff; text-decoration: underline;">中文</a></p>
-    </div>
-  </footer>
-</body>
-</html>
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QR Code Scanner &amp; Barcode Reader | Monkey APP</title><meta name="description" content="Scan QR codes and barcodes, read codes from photos and create QR codes quickly."><meta name="keywords" content="qr code scanner, barcode scanner, scan qr code from image, qr code generator"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://monkeyapp.stream/QrCode/"><link rel="alternate" hreflang="en" href="https://monkeyapp.stream/QrCode/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://monkeyapp.stream/QrCode/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://monkeyapp.stream/QrCode/zh-tw/">
+<link rel="alternate" hreflang="de" href="https://monkeyapp.stream/QrCode/de/">
+<link rel="alternate" hreflang="pt" href="https://monkeyapp.stream/QrCode/pt/">
+<link rel="alternate" hreflang="ja" href="https://monkeyapp.stream/QrCode/ja/">
+<link rel="alternate" hreflang="it" href="https://monkeyapp.stream/QrCode/it/">
+<link rel="alternate" hreflang="fr" href="https://monkeyapp.stream/QrCode/fr/">
+<link rel="alternate" hreflang="ko" href="https://monkeyapp.stream/QrCode/ko/">
+<link rel="alternate" hreflang="es" href="https://monkeyapp.stream/QrCode/es/">
+<link rel="alternate" hreflang="ar" href="https://monkeyapp.stream/QrCode/ar/">
+<link rel="alternate" hreflang="x-default" href="https://monkeyapp.stream/QrCode/"><meta property="og:type" content="website"><meta property="og:title" content="QR Code Scanner &amp; Barcode Reader"><meta property="og:description" content="Scan QR codes and barcodes, read codes from photos and create QR codes quickly."><meta property="og:url" content="https://monkeyapp.stream/QrCode/"><meta property="og:site_name" content="Monkey APP"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="../assets/seo-v2.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "QR Scanner", "applicationCategory": "UtilitiesApplication", "operatingSystem": "iOS / Android", "description": "Scan QR codes and barcodes, read codes from photos and create QR codes quickly.", "url": "https://monkeyapp.stream/QrCode/", "downloadUrl": "https://apps.apple.com/app/id6755075231"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What can I do with QR Scanner?", "acceptedAnswer": {"@type": "Answer", "text": "Use the focused features above to complete the task directly on your phone."}}, {"@type": "Question", "name": "Is QR Scanner designed for mobile use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The interface and workflow are designed for mobile use."}}, {"@type": "Question", "name": "How do I get started?", "acceptedAnswer": {"@type": "Answer", "text": "Install the app from the store and choose the feature that matches your task."}}]}</script></head><body class=""><div class="wrap"><nav class="nav"><a class="brand" href="../">Monkey APP</a><div class="langs"><a href="en/" lang="en">English</a> <a href="zh-cn/" lang="zh-Hans">简体中文</a> <a href="zh-tw/" lang="zh-Hant">繁體中文</a> <a href="de/" lang="de">Deutsch</a> <a href="pt/" lang="pt">Português</a> <a href="ja/" lang="ja">日本語</a> <a href="it/" lang="it">Italiano</a> <a href="fr/" lang="fr">Français</a> <a href="ko/" lang="ko">한국어</a> <a href="es/" lang="es">Español</a> <a href="ar/" lang="ar">العربية</a></div></nav><main><section class="hero"><div><div class="eyebrow">QR Scanner</div><h1>QR Code Scanner &amp; Barcode Reader</h1><p class="lead">Scan QR codes and barcodes, read codes from photos and create QR codes quickly.</p><a class="cta" href="https://apps.apple.com/app/id6755075231" rel="nofollow noopener">Download on the App Store</a> <a class="cta" href="https://play.google.com/store/apps/details?id=com.tian.qrcode" rel="nofollow noopener">Get it on Google Play</a></div><div class="visual"><img class="icon" src="../assets/icons/qr-code.svg" alt="QR Scanner"></div></section><section class="section"><h2>Features</h2><div class="grid"><div class="card"><strong>Fast QR scanning</strong><p class="note">Designed around the task people actually need to finish.</p></div><div class="card"><strong>Barcode reader</strong><p class="note">Designed around the task people actually need to finish.</p></div><div class="card"><strong>Scan from photos</strong><p class="note">Designed around the task people actually need to finish.</p></div><div class="card"><strong>QR code generator</strong><p class="note">Designed around the task people actually need to finish.</p></div></div></section><section class="section"><h2>Popular searches</h2><div class="keywords"><span class="pill">qr code scanner</span><span class="pill">barcode scanner</span><span class="pill">scan qr code from image</span><span class="pill">qr code generator</span></div><p class="note">Fast, focused mobile utility · Designed around the task people actually need to finish.</p></section><section class="section faq"><h2>Frequently asked questions</h2><details><summary>What can I do with QR Scanner?</summary><p>Use the focused features above to complete the task directly on your phone.</p></details><details><summary>Is QR Scanner designed for mobile use?</summary><p>Yes. The interface and workflow are designed for mobile use.</p></details><details><summary>How do I get started?</summary><p>Install the app from the store and choose the feature that matches your task.</p></details></section><section class="section"><h2>Explore more tools</h2><div class="tools"><a href="../AudioEditor/en/">Audio Editor Pro</a><a href="../VoiceRecorderApp/en/">Voice Memos Pro</a><a href="../IDPhoto/en/">Passport Photo</a><a href="../WatermarkCam/en/">Timestamp Camera</a><a href="../PDFConverter/en/">PDF Converter</a><a href="../Teleprompter/en/">Teleprompter Pro</a><a href="../CoinLens/en/">CoinLens</a></div></section></main><footer class="footer">© 2026 Monkey APP · <a href="../privacy-policy.html">Privacy</a> · <a href="../terms-of-service.html">Terms</a></footer></div></body></html>
