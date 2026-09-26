@@ -1,0 +1,90 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone 1 -->
+  <g transform="translate(50, 50)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="120" height="240" rx="25" fill="url(#phoneGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Screen -->
+    <rect x="10" y="20" width="100" height="180" rx="15" fill="url(#screenGradient)"/>
+    <!-- Home Indicator -->
+    <rect x="45" y="210" width="30" height="4" rx="2" fill="rgba(255,255,255,0.8)"/>
+    
+    <!-- App Icons on Screen -->
+    <rect x="20" y="35" width="25" height="25" rx="6" fill="#667eea"/>
+    <rect x="55" y="35" width="25" height="25" rx="6" fill="#48bb78"/>
+    <rect x="90" y="35" width="25" height="25" rx="6" fill="#ed8936"/>
+    
+    <rect x="20" y="70" width="25" height="25" rx="6" fill="#38b2ac"/>
+    <rect x="55" y="70" width="25" height="25" rx="6" fill="#9f7aea"/>
+    <rect x="90" y="70" width="25" height="25" rx="6" fill="#f56565"/>
+    
+    <!-- Status Bar -->
+    <rect x="15" y="25" width="90" height="2" rx="1" fill="#4a5568"/>
+  </g>
+  
+  <!-- Phone 2 (Slightly Rotated) -->
+  <g transform="translate(200, 30) rotate(15)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="120" height="240" rx="25" fill="url(#phoneGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Screen -->
+    <rect x="10" y="20" width="100" height="180" rx="15" fill="url(#screenGradient)"/>
+    <!-- Home Indicator -->
+    <rect x="45" y="210" width="30" height="4" rx="2" fill="rgba(255,255,255,0.8)"/>
+    
+    <!-- App Content -->
+    <rect x="20" y="35" width="80" height="40" rx="8" fill="#667eea"/>
+    <rect x="25" y="85" width="70" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="25" y="100" width="50" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="25" y="115" width="60" height="8" rx="4" fill="#e2e8f0"/>
+    
+    <!-- Bottom Navigation -->
+    <rect x="20" y="170" width="80" height="25" rx="12" fill="#f7fafc"/>
+    <circle cx="35" cy="182" r="4" fill="#667eea"/>
+    <circle cx="60" cy="182" r="4" fill="#cbd5e0"/>
+    <circle cx="85" cy="182" r="4" fill="#cbd5e0"/>
+  </g>
+  
+  <!-- Phone 3 -->
+  <g transform="translate(380, 60)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="120" height="240" rx="25" fill="url(#phoneGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Screen -->
+    <rect x="10" y="20" width="100" height="180" rx="15" fill="url(#screenGradient)"/>
+    <!-- Home Indicator -->
+    <rect x="45" y="210" width="30" height="4" rx="2" fill="rgba(255,255,255,0.8)"/>
+    
+    <!-- Chart/Graph Content -->
+    <rect x="20" y="35" width="80" height="30" rx="5" fill="#667eea"/>
+    <text x="60" y="55" font-family="Inter, sans-serif" font-size="12" text-anchor="middle" fill="white">Analytics</text>
+    
+    <!-- Bar Chart -->
+    <rect x="25" y="80" width="8" height="30" fill="#48bb78"/>
+    <rect x="38" y="70" width="8" height="40" fill="#48bb78"/>
+    <rect x="51" y="85" width="8" height="25" fill="#48bb78"/>
+    <rect x="64" y="75" width="8" height="35" fill="#48bb78"/>
+    <rect x="77" y="90" width="8" height="20" fill="#48bb78"/>
+    <rect x="90" y="65" width="8" height="45" fill="#48bb78"/>
+    
+    <!-- Stats -->
+    <circle cx="35" cy="140" r="15" fill="#ed8936"/>
+    <text x="35" y="145" font-family="Inter, sans-serif" font-size="8" text-anchor="middle" fill="white">85%</text>
+    
+    <circle cx="85" cy="140" r="15" fill="#9f7aea"/>
+    <text x="85" y="145" font-family="Inter, sans-serif" font-size="8" text-anchor="middle" fill="white">92%</text>
+  </g>
+  
+  <!-- Floating Elements -->
+  <circle cx="100" cy="350" r="20" fill="rgba(102, 126, 234, 0.2)"/>
+  <circle cx="500" cy="100" r="15" fill="rgba(118, 75, 162, 0.2)"/>
+  <circle cx="550" cy="350" r="25" fill="rgba(102, 126, 234, 0.15)"/>
+</svg>

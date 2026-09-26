@@ -1,0 +1,30 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="securityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="22" fill="url(#securityGradient)"/>
+  
+  <!-- Shield -->
+  <path d="M24 6 L14 12 L14 26 C14 32 19 37 24 38 C29 37 34 32 34 26 L34 12 Z" fill="white" opacity="0.95"/>
+  
+  <!-- Inner shield -->
+  <path d="M24 10 L17 14 L17 25 C17 29 20 32 24 33 C28 32 31 29 31 25 L31 14 Z" fill="#DC2626" opacity="0.1"/>
+  
+  <!-- Checkmark -->
+  <path d="M19 22 L22 25 L29 18" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Lock symbol -->
+  <rect x="21" y="28" width="6" height="4" rx="1" fill="#DC2626" opacity="0.8"/>
+  <path d="M20 28 L20 26 C20 24 22 22 24 22 C26 22 28 24 28 26 L28 28" stroke="#DC2626" stroke-width="1.5" fill="none"/>
+  
+  <!-- Security dots -->
+  <circle cx="12" cy="18" r="1" fill="white" opacity="0.8"/>
+  <circle cx="36" cy="18" r="1" fill="white" opacity="0.8"/>
+  <circle cx="12" cy="30" r="1" fill="white" opacity="0.8"/>
+  <circle cx="36" cy="30" r="1" fill="white" opacity="0.8"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="audioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#audioGradient)" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Microphone -->
+  <rect x="28" y="16" width="8" height="16" rx="4" fill="white"/>
+  <rect x="26" y="34" width="12" height="2" rx="1" fill="white"/>
+  <line x1="32" y1="36" x2="32" y2="42" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="42" x2="38" y2="42" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sound waves -->
+  <path d="M20 28 Q18 32 20 36" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M44 28 Q46 32 44 36" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M16 24 Q14 32 16 40" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M48 24 Q50 32 48 40" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Waveform visualization -->
+  <rect x="20" y="48" width="2" height="8" fill="white" opacity="0.8"/>
+  <rect x="24" y="46" width="2" height="12" fill="white" opacity="0.8"/>
+  <rect x="28" y="50" width="2" height="4" fill="white" opacity="0.8"/>
+  <rect x="32" y="44" width="2" height="16" fill="white" opacity="0.8"/>
+  <rect x="36" y="48" width="2" height="8" fill="white" opacity="0.8"/>
+  <rect x="40" y="46" width="2" height="12" fill="white" opacity="0.8"/>
+  <rect x="44" y="50" width="2" height="4" fill="white" opacity="0.8"/>
+</svg>
