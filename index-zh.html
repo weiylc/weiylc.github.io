@@ -98,7 +98,7 @@
     </script>
     <script src="assets/js/ga.js"></script>
 </head>
-<body>
+<body><div style="position:fixed;right:16px;top:16px;z-index:9999"><select class="language-dropdown" aria-label="Language" onchange="monkeyLangGo(this)"><option value="/">English</option><option value="/index-zh.html" selected>简体中文</option><option value="/index-zh-TW.html">繁體中文</option><option value="/index-de.html">Deutsch</option><option value="/index-pt.html">Português</option><option value="/index-ja.html">日本語</option><option value="/index-it.html">Italiano</option><option value="/index-fr.html">Français</option><option value="/index-ko.html">한국어</option><option value="/index-es.html">Español</option><option value="/index-ar.html">العربية</option></select></div>
     <!-- Language Selector -->
     <div class="language-selector">
         <select id="language-select" onchange="changeLanguage(this.value)">
@@ -983,5 +983,5 @@
     </script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/language-prompt.js"></script>
-</body>
+<div class="language-prompt" data-language-prompt data-current="zh-cn" hidden><div class="language-prompt-inner"><span>🌐</span><p data-prompt-text></p><button class="mini-btn primary" data-switch>Switch language</button><button class="mini-btn" data-stay>Stay here</button><button class="mini-btn" data-dismiss>Don’t remind me</button><a hidden data-lang-target="en" data-lang-name="English" href="/"></a><a hidden data-lang-target="zh-cn" data-lang-name="简体中文" href="/index-zh.html"></a><a hidden data-lang-target="zh-tw" data-lang-name="繁體中文" href="/index-zh-TW.html"></a><a hidden data-lang-target="de" data-lang-name="Deutsch" href="/index-de.html"></a><a hidden data-lang-target="pt" data-lang-name="Português" href="/index-pt.html"></a><a hidden data-lang-target="ja" data-lang-name="日本語" href="/index-ja.html"></a><a hidden data-lang-target="it" data-lang-name="Italiano" href="/index-it.html"></a><a hidden data-lang-target="fr" data-lang-name="Français" href="/index-fr.html"></a><a hidden data-lang-target="ko" data-lang-name="한국어" href="/index-ko.html"></a><a hidden data-lang-target="es" data-lang-name="Español" href="/index-es.html"></a><a hidden data-lang-target="ar" data-lang-name="العربية" href="/index-ar.html"></a></div></div><script src="/assets/language-v4.js" defer></script></body>
 </html>
