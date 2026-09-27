@@ -14,3 +14,5 @@
 .store-btn.google{background:#fff;color:#111}
 .app-icon-placeholder{display:flex;align-items:center;justify-content:center;background:#f3f4f6;border-radius:16px;font-size:22px}
 @media(max-width:520px){.store-actions{gap:6px}.store-btn{flex:1;min-width:120px}}
+
+.store-btn.detail{background:var(--surface,#fff);border:1px solid rgba(15,23,42,.14);color:inherit}.detail-actions{flex-wrap:wrap}
