@@ -10,6 +10,16 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://monkeyapp.stream'
+# Pages flagged for a single dofollow source in the 2026-10-13 Ahrefs export.
+MINIMUM_INLINK_PATHS = [
+    '/apps/fr/', '/apps/zh-tw/', '/apps/es/', '/apps/ar/', '/apps/it/',
+    '/apps/de/', '/apps/pt/', '/apps/ko/', '/apps/ja/',
+    '/AIAppearance/terms_of_service_zh.html',
+    '/AIAppearance/privacy_policy_zh.html',
+    '/AIAppearance/privacy_policy_en.html', '/Bazi/index-zh.html',
+    '/coinvio-privacy-policy.html', '/HbBrowser/terms-of-service-zh.html',
+    '/AIAppearance/terms_of_service_en.html',
+]
 
 class Page(HTMLParser):
     def __init__(self, text):
@@ -48,6 +58,7 @@ def check():
     pages = {page_url(p): Page(p.read_text()) for p in ROOT.rglob('*.html')}
     errors = []
     edges = {u: set() for u in pages}
+    incoming = {u: set() for u in pages}
     for u, p in pages.items():
         if len(p.canonicals) != 1:
             errors.append(f'{u}: expected one canonical')
@@ -67,12 +78,24 @@ def check():
                 dest /= 'index.html'
             if not dest.is_file():
                 errors.append(f'{u}: broken {key}: {attrs[key]}')
-            target_url = BASE + target.path.replace('/index.html', '/')
+            target_url = BASE + (target.path or '/').replace('/index.html', '/')
             if tag == 'a' and target_url in pages:
                 edges[u].add(target_url)
+                # Count distinct canonical source pages, excluding self-links,
+                # nofollow links and fragment-only navigation.
+                if (canonical == u and target_url != u
+                        and 'nofollow' not in attrs.get('rel', '').lower().split()):
+                    incoming[target_url].add(u)
         languages = [lang.lower() for lang, _ in p.alternates]
         if len(languages) != len(set(languages)):
             errors.append(f'{u}: duplicate hreflang language')
+        target_languages = {}
+        for lang, target in p.alternates:
+            if lang.lower() != 'x-default':
+                target_languages.setdefault(target, set()).add(lang.lower().split('-')[0])
+        for target, language_codes in target_languages.items():
+            if len(language_codes) > 1:
+                errors.append(f'{u}: different hreflang languages share one URL: {target}')
         for lang, target in p.alternates:
             if target not in pages or pages[target].canonicals != [target]:
                 errors.append(f'{u}: hreflang is not canonical: {target}')
@@ -94,6 +117,24 @@ def check():
             errors.append(f'Sitemap URL has no crawlable path from home: {u}')
         if u in pages and any(a.get('http-equiv', '').lower() == 'refresh' or (a.get('name') == 'robots' and 'noindex' in a.get('content', '')) for t, a in pages[u].tags if t == 'meta'):
             errors.append(f'Sitemap contains redirect/noindex page: {u}')
+        if u in pages:
+            if not edges[u] - {u}:
+                errors.append(f'{u}: no outgoing internal navigation')
+            metadata = {a.get('property'): a.get('content', '') for t, a in pages[u].tags if t == 'meta'}
+            for name in ('og:title', 'og:type', 'og:url', 'og:image', 'og:description'):
+                if not metadata.get(name):
+                    errors.append(f'{u}: missing {name}')
+            if metadata.get('og:url') != u:
+                errors.append(f'{u}: og:url does not match canonical')
+            image = urlsplit(metadata.get('og:image', ''))
+            if image.scheme not in ('http', 'https'):
+                errors.append(f'{u}: og:image must be an absolute HTTP URL')
+            elif image.netloc == 'monkeyapp.stream' and not (ROOT / image.path.lstrip('/')).is_file():
+                errors.append(f'{u}: missing local Open Graph image')
+    for path in MINIMUM_INLINK_PATHS:
+        u = BASE + path
+        if len(incoming.get(u, set())) < 2:
+            errors.append(f'{u}: expected at least two distinct canonical dofollow sources')
     apps = json.loads((ROOT / 'assets/apps.json').read_text())
     for a in apps:
         detail = BASE + '/' + a['slug'] + '/en/'
