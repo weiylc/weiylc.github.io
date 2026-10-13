@@ -65,6 +65,9 @@ jobs:
           
           echo "✅ 静态网站构建完成，准备部署！"
           
+      - name: Validate catalog and SEO links
+        run: python3 scripts/check_site.py
+
       - name: 📤 上传构建产物
         uses: actions/upload-pages-artifact@v4
         with:

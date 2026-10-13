@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice to Text - AI Voice Transcription</title>
-    <meta name="description" content="Professional iOS app for AI-powered voice to text transcription with real-time recording, smart editing, and high accuracy recognition.">
-    <meta name="keywords" content="voice to text, transcription, AI speech recognition, voice notes, iOS app">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voice to Text - AI Voice Transcription</title>
+<meta content="Professional iOS app for AI-powered voice to text transcription with real-time recording, smart editing, and high accuracy recognition." name="description"/>
+<meta content="voice to text, transcription, AI speech recognition, voice notes, iOS app" name="keywords"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         .app-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
         .app-icon-large { width: 120px; height: 120px; margin: 0 auto 30px; background: white; border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         .app-icon-large .icon { font-size: 60px; color: #667eea; }
@@ -28,114 +29,109 @@
         .language-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; align-items: center; }
         .home-link { padding: 8px 16px; background: #667eea; color: white; text-decoration: none; border-radius: 6px; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     </style>
-    <script src="../assets/js/ga.js"></script>
-</head>
+<script src="../assets/js/ga.js"></script>
+<link href="https://monkeyapp.stream/VoiceRecorderApp/en/" rel="canonical"/></head>
 <body>
-    <!-- Language Selector and Home Link -->
-    <div class="language-selector">
-        <a href="../" class="home-link" id="home-link">Back to Home</a>
-        <select onchange="switchLanguage(this.value)">
-            <option value="en" selected>English</option>
-            <option value="zh">中文</option>
-        </select>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="app-hero">
-        <div class="container">
-            <div class="app-icon-large">
-                <div class="icon">🎤</div>
-            </div>
-            <h1 id="hero-title">Voice to Text</h1>
-            <p id="hero-subtitle">AI Voice Transcription App</p>
-            <p id="hero-description">High-accuracy speech recognition, real-time transcription, and smart editing</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="container">
-        <h2 id="features-title" style="text-align: center; margin: 60px 0 30px; font-size: 2.5em; color: #333;">Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎙️</div>
-                <h3 id="feature1-title">High-quality Recording</h3>
-                <p id="feature1-desc">Professional audio recording with multiple formats and clear quality</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🧠</div>
-                <h3 id="feature2-title">AI Transcription</h3>
-                <p id="feature2-desc">Accurate speech recognition powered by AI for fast transcription</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📝</div>
-                <h3 id="feature3-title">Real-time Transcription</h3>
-                <p id="feature3-desc">View and edit transcription results instantly with smart tools</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">✏️</div>
-                <h3 id="feature4-title">Smart Text Editing</h3>
-                <p id="feature4-desc">Convenient text processing for editing and sharing results</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3 id="feature5-title">History Management</h3>
-                <p id="feature5-desc">Auto-save recordings and transcripts with categorized management</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎨</div>
-                <h3 id="feature6-title">Modern Interface</h3>
-                <p id="feature6-desc">Beautiful SwiftUI-based UI with intuitive operation</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Section -->
-    <section class="ai-section">
-        <div class="container">
-            <h2 id="ai-title">AI Technology Powered</h2>
-            <p id="ai-subtitle">Cutting-edge AI for exceptional voice-to-text experience</p>
-            <div class="ai-grid">
-                <div class="ai-card">
-                    <div class="ai-icon">🧠</div>
-                    <h3 id="ai1-title">Deep Learning</h3>
-                    <p id="ai1-desc">Speech recognition model based on deep neural networks</p>
-                </div>
-                <div class="ai-card">
-                    <div class="ai-icon">🌍</div>
-                    <h3 id="ai2-title">Multi-language Support</h3>
-                    <p id="ai2-desc">Support for Chinese, English and multiple languages</p>
-                </div>
-                <div class="ai-card">
-                    <div class="ai-icon">⚡</div>
-                    <h3 id="ai3-title">Real-time Processing</h3>
-                    <p id="ai3-desc">Fast response and real-time transcription for improved efficiency</p>
-                </div>
-                <div class="ai-card">
-                    <div class="ai-icon">✅</div>
-                    <h3 id="ai4-title">High Accuracy</h3>
-                    <p id="ai4-desc">Industry-leading recognition accuracy with reduced errors</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section class="download-section">
-        <div class="container">
-            <h2 id="download-title">Download Now</h2>
-            <p id="download-subtitle">Free on App Store. Start your intelligent transcription journey</p>
-            <a href="#" class="app-store-btn" onclick="event.stopPropagation();">
-                <img src="../assets/app-store-badge.svg" alt="Download on App Store">
-            </a>
-            <div class="footer-links">
-                <a id="privacy-link" href="privacy_policy_en.html">Privacy Policy</a>
-                <a id="terms-link" href="terms_of_service_en.html">Terms of Service</a>
-                <a id="contact-link" href="mailto:devapptian@gmail.com">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <script>
+<!-- Language Selector and Home Link -->
+<div class="language-selector">
+<a class="home-link" href="/" id="home-link">Back to Home</a>
+<select onchange="switchLanguage(this.value)">
+<option selected="" value="en">English</option>
+<option value="zh">中文</option>
+</select>
+</div>
+<!-- Hero Section -->
+<section class="app-hero">
+<div class="container">
+<div class="app-icon-large">
+<div class="icon">🎤</div>
+</div>
+<h1 id="hero-title">Voice to Text</h1>
+<p id="hero-subtitle">AI Voice Transcription App</p>
+<p id="hero-description">High-accuracy speech recognition, real-time transcription, and smart editing</p>
+</div>
+</section>
+<!-- Features Section -->
+<section class="container">
+<h2 id="features-title" style="text-align: center; margin: 60px 0 30px; font-size: 2.5em; color: #333;">Key Features</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">🎙️</div>
+<h3 id="feature1-title">High-quality Recording</h3>
+<p id="feature1-desc">Professional audio recording with multiple formats and clear quality</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🧠</div>
+<h3 id="feature2-title">AI Transcription</h3>
+<p id="feature2-desc">Accurate speech recognition powered by AI for fast transcription</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📝</div>
+<h3 id="feature3-title">Real-time Transcription</h3>
+<p id="feature3-desc">View and edit transcription results instantly with smart tools</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">✏️</div>
+<h3 id="feature4-title">Smart Text Editing</h3>
+<p id="feature4-desc">Convenient text processing for editing and sharing results</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📚</div>
+<h3 id="feature5-title">History Management</h3>
+<p id="feature5-desc">Auto-save recordings and transcripts with categorized management</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🎨</div>
+<h3 id="feature6-title">Modern Interface</h3>
+<p id="feature6-desc">Beautiful SwiftUI-based UI with intuitive operation</p>
+</div>
+</div>
+</section>
+<!-- AI Section -->
+<section class="ai-section">
+<div class="container">
+<h2 id="ai-title">AI Technology Powered</h2>
+<p id="ai-subtitle">Cutting-edge AI for exceptional voice-to-text experience</p>
+<div class="ai-grid">
+<div class="ai-card">
+<div class="ai-icon">🧠</div>
+<h3 id="ai1-title">Deep Learning</h3>
+<p id="ai1-desc">Speech recognition model based on deep neural networks</p>
+</div>
+<div class="ai-card">
+<div class="ai-icon">🌍</div>
+<h3 id="ai2-title">Multi-language Support</h3>
+<p id="ai2-desc">Support for Chinese, English and multiple languages</p>
+</div>
+<div class="ai-card">
+<div class="ai-icon">⚡</div>
+<h3 id="ai3-title">Real-time Processing</h3>
+<p id="ai3-desc">Fast response and real-time transcription for improved efficiency</p>
+</div>
+<div class="ai-card">
+<div class="ai-icon">✅</div>
+<h3 id="ai4-title">High Accuracy</h3>
+<p id="ai4-desc">Industry-leading recognition accuracy with reduced errors</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Download Section -->
+<section class="download-section">
+<div class="container">
+<h2 id="download-title">Download Now</h2>
+<p id="download-subtitle">Free on App Store. Start your intelligent transcription journey</p>
+<a class="app-store-btn" href="#" onclick="event.stopPropagation();">
+<img alt="Download on App Store" src="../assets/app-store-badge.svg"/>
+</a>
+<div class="footer-links">
+<a href="/VoiceRecorderApp/privacy_policy_en.html" id="privacy-link">Privacy Policy</a>
+<a href="/VoiceRecorderApp/terms_of_service_en.html" id="terms-link">Terms of Service</a>
+<a href="mailto:devapptian@gmail.com" id="contact-link">Contact Us</a>
+</div>
+</div>
+</section>
+<script>
         const translations = {
             en: {
                 'hero-title': 'Voice to Text',
@@ -197,5 +193,5 @@
 
         document.addEventListener('DOMContentLoaded', () => switchLanguage('en'));
     </script>
-</body>
+<div class="container tools" id="app-policies"><a href="/VoiceRecorderApp/privacy_policy_en.html">Privacy Policy - Voice to Text · English</a><a href="/VoiceRecorderApp/privacy_policy_zh.html">隐私政策 - 语音转文字 · 中文</a><a href="/VoiceRecorderApp/terms_of_service_en.html">Terms of Service - Voice to Text · English</a><a href="/VoiceRecorderApp/terms_of_service_zh.html">服务条款 - 语音转文字 · 中文</a></div></body>
 </html>

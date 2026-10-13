@@ -1,27 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PicJointer — Photo Collage & Editor</title>
-    <meta name="description" content="Smart collage layouts, filters & pro adjustments, poster templates and HD export.">
-    <meta name="keywords" content="collage, photo editor, filter, poster, layout, grid, HD export, adjustment">
-    <script src="../assets/js/lang-router.js" data-index-lang="en" data-has-en="true"></script>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="PicJointer — Photo Collage & Editor">
-    <meta property="og:description" content="Smart layouts, filters & adjustments, poster templates and HD export">
-    <meta property="og:image" content="../assets/icons/watermark-cam.svg">
-    <meta property="og:url" content="https://monkeyapp.stream/PicJointer/">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PicJointer — Photo Collage &amp; Editor</title>
+<meta content="Smart collage layouts, filters &amp; pro adjustments, poster templates and HD export." name="description"/>
+<meta content="collage, photo editor, filter, poster, layout, grid, HD export, adjustment" name="keywords"/>
+<script data-has-en="true" data-index-lang="en" src="../assets/js/lang-router.js"></script>
+<!-- Open Graph -->
+<meta content="PicJointer — Photo Collage &amp; Editor" property="og:title"/>
+<meta content="Smart layouts, filters &amp; adjustments, poster templates and HD export" property="og:description"/>
+<meta content="../assets/icons/watermark-cam.svg" property="og:image"/>
+<meta content="https://monkeyapp.stream/PicJointer/en/" property="og:url"/>
+<!-- Favicon -->
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Styles -->
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         .app-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:80px 0;text-align:center}
         .app-icon-large{width:120px;height:120px;margin:0 auto 30px;background:#fff;border-radius:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(0,0,0,.1)}
         .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:60px 0}
@@ -40,82 +37,76 @@
         .language-selector select{padding:8px 12px;border:1px solid #ddd;border-radius:6px;background:#fff;font-size:14px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1)}
         @media (max-width:768px){.feature-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.container{padding:0 16px}}
     </style>
-    <script src="../assets/js/ga.js"></script>
-</head>
+<script src="../assets/js/ga.js"></script>
+<link href="https://monkeyapp.stream/PicJointer/en/" rel="canonical"/></head>
 <body>
-    <div class="language-selector">
-        <a href="../" class="home-link" id="home-link">Back to Home</a>
-        <select onchange="switchLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-        </select>
-    </div>
-
-    <section class="app-hero">
-        <div class="container">
-            <div class="app-icon-large">
-                <div class="icon">🖼️</div>
-            </div>
-            <h1 id="hero-title">PicJointer — Photo Collage & Editor</h1>
-            <p id="hero-subtitle">Smart collage layouts and high‑resolution export</p>
-            <p id="hero-description">Choose 1–9 photos, apply filters and adjustments, add text/stickers, and export stunning collages</p>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2 id="features-title" style="text-align:center;margin:60px 0 30px;font-size:2.5em;color:#333;">Core Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🧩</div>
-                <h3 id="feature1-title">Smart Collage Layouts</h3>
-                <p id="feature1-desc">Common grid and tiling templates with auto alignment and cropping</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎛️</div>
-                <h3 id="feature2-title">Filters & Pro Adjustments</h3>
-                <p id="feature2-desc">Built‑in filters and brightness/contrast/saturation/temperature controls</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📐</div>
-                <h3 id="feature3-title">Canvas & Styling</h3>
-                <p id="feature3-desc">Margins, corner radius and backgrounds tailored for social ratios</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📝</div>
-                <h3 id="feature4-title">Text & Stickers</h3>
-                <p id="feature4-desc">Titles and annotations with font, size and color options</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🖱️</div>
-                <h3 id="feature5-title">Layers & Interaction</h3>
-                <p id="feature5-desc">Drag, scale, rotate and reorder for precise composition</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📤</div>
-                <h3 id="feature6-title">HD Export & Sharing</h3>
-                <p id="feature6-desc">On‑device high‑resolution export, save to Photos and share</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="download-section">
-        <div class="container">
-            <h2 id="download-title">Download Now</h2>
-            <p id="download-subtitle">Free on the App Store — start creating high‑quality collages</p>
-
-            <a href="#" class="app-store-btn">
-                <img src="../assets/app-store-badge.svg" alt="Download on App Store" style="height:60px;">
-            </a>
-
-            <div class="footer-links">
-                <a href="privacy-en.html" id="privacy-link">Privacy Policy</a>
-                <a href="terms-en.html" id="terms-link">Terms of Service</a>
-                <a href="mailto:devapptian@gmail.com" id="contact-link">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <script>
+<div class="language-selector">
+<a class="home-link" href="/" id="home-link">Back to Home</a>
+<select onchange="switchLanguage(this.value)">
+<option value="en">English</option>
+<option value="zh">中文</option>
+</select>
+</div>
+<section class="app-hero">
+<div class="container">
+<div class="app-icon-large">
+<div class="icon">🖼️</div>
+</div>
+<h1 id="hero-title">PicJointer — Photo Collage &amp; Editor</h1>
+<p id="hero-subtitle">Smart collage layouts and high‑resolution export</p>
+<p id="hero-description">Choose 1–9 photos, apply filters and adjustments, add text/stickers, and export stunning collages</p>
+</div>
+</section>
+<section class="container">
+<h2 id="features-title" style="text-align:center;margin:60px 0 30px;font-size:2.5em;color:#333;">Core Features</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">🧩</div>
+<h3 id="feature1-title">Smart Collage Layouts</h3>
+<p id="feature1-desc">Common grid and tiling templates with auto alignment and cropping</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🎛️</div>
+<h3 id="feature2-title">Filters &amp; Pro Adjustments</h3>
+<p id="feature2-desc">Built‑in filters and brightness/contrast/saturation/temperature controls</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📐</div>
+<h3 id="feature3-title">Canvas &amp; Styling</h3>
+<p id="feature3-desc">Margins, corner radius and backgrounds tailored for social ratios</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📝</div>
+<h3 id="feature4-title">Text &amp; Stickers</h3>
+<p id="feature4-desc">Titles and annotations with font, size and color options</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🖱️</div>
+<h3 id="feature5-title">Layers &amp; Interaction</h3>
+<p id="feature5-desc">Drag, scale, rotate and reorder for precise composition</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📤</div>
+<h3 id="feature6-title">HD Export &amp; Sharing</h3>
+<p id="feature6-desc">On‑device high‑resolution export, save to Photos and share</p>
+</div>
+</div>
+</section>
+<section class="download-section">
+<div class="container">
+<h2 id="download-title">Download Now</h2>
+<p id="download-subtitle">Free on the App Store — start creating high‑quality collages</p>
+<a class="app-store-btn" href="#">
+<img alt="Download on App Store" src="../assets/app-store-badge.svg" style="height:60px;"/>
+</a>
+<div class="footer-links">
+<a href="/PicJointer/privacy-en.html" id="privacy-link">Privacy Policy</a>
+<a href="/PicJointer/terms-en.html" id="terms-link">Terms of Service</a>
+<a href="mailto:devapptian@gmail.com" id="contact-link">Contact Us</a>
+</div>
+</div>
+</section>
+<script>
         const translations = {
             en: {
                 'home-link': 'Back to Home',
@@ -184,6 +175,5 @@
             }
         }
     </script>
-</body>
+<div class="container tools" id="app-policies"><a href="/PicJointer/privacy-en.html">Privacy Policy - PicJointer · English</a><a href="/PicJointer/privacy-zh.html">隐私政策 - PicJointer 拼图相册 · 中文</a><a href="/PicJointer/terms-en.html">Terms of Service - PicJointer · English</a><a href="/PicJointer/terms-zh.html">用户服务条款 - PicJointer 拼图相册 · 中文</a></div></body>
 </html>
-
